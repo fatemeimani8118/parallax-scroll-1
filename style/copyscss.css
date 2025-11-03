@@ -1,0 +1,1160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "MyCustomFont";
+  src: url(../font/Austin-Light-Trial-BF662b0bb2d983a.otf) format("truetype");
+}
+@font-face {
+  font-family: "satoshi";
+  src: url(../font/Satoshi_Complete/Fonts/OTF/Satoshi-Regular.otf);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #D2D3C3;
+  font-family: "MyCustomFont";
+  overflow-x: hidden;
+  transition: transform 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > main > .column1 {
+  margin-right: 14%;
+}
+body > main > .column2 {
+  margin-left: 14%;
+}
+body > main > div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > main > div > .section {
+  width: 1px;
+  height: 2450vh;
+  background-color: rgba(255, 255, 255, 0.548);
+  margin-inline: 10px;
+  z-index: -1;
+}
+body > main > header {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  left: 0;
+}
+body > main > header > button {
+  width: 15%;
+  margin: 15px;
+  height: 8vh;
+  border-radius: 50px;
+  display: flex;
+  padding-left: 0.5%;
+  border: 1px solid white;
+  background-color: white;
+  overflow: hidden;
+  font-family: "satoshi";
+}
+body > main > header > button > img {
+  scale: 0.8;
+  margin: 2%;
+}
+body > main > header > button > ul {
+  margin-left: 1%;
+  animation: elevator 8s infinite;
+  margin-top: 0;
+}
+body > main > header > button > ul > li {
+  list-style-type: none;
+  margin-top: 14px;
+  text-align: start;
+  margin-block: 12%;
+  font-size: 16px;
+  font-family: "satoshi";
+}
+body > main > header > #par {
+  width: 75%;
+  display: flex;
+  justify-content: end;
+  margin-right: 1%;
+}
+body > main > header > #par > button {
+  width: 12%;
+  height: 8vh;
+  margin: 15px;
+  border-radius: 50px;
+  border: 1px solid white;
+  background-color: white;
+  margin-inline: 0.1%;
+  margin-block: 2%;
+  font-size: 17px;
+}
+body > main > header > #par > #b1 {
+  border-radius: 50px 0 0 50px;
+}
+body > main > header > #par > #b2 {
+  border-radius: 0 0 0 0;
+}
+body > main > header > #par > #b3 {
+  border-radius: 0 50px 50px 0;
+}
+body > main > header > #par > #b4 {
+  width: 15%;
+  border-radius: 50px;
+  background-color: #51733F;
+  border: #51733F 1px solid;
+  color: white;
+  margin-left: 2%;
+}
+body > main > #mid {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 15%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  perspective: 1000px;
+}
+body > main > #mid > #half {
+  transition: rotate 1s ease;
+  rotate: 0deg;
+  width: 88%;
+  height: 44vw;
+  background-color: #f5f5eb;
+  overflow: hidden;
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 35%;
+  transform-origin: top center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+}
+body > main > #mid > #half > p {
+  font-size: 70px;
+  width: 60%;
+  text-align: center;
+  color: #1B1C1E;
+}
+body > main > #mid > p {
+  font-size: 150px;
+  position: absolute;
+  z-index: 99;
+  pointer-events: none;
+  color: #1B1C1E;
+}
+body > main > #mid > #first {
+  top: 5%;
+  left: 27%;
+}
+body > main > #mid > #last {
+  top: 18%;
+  left: 39%;
+}
+body > main > #mid > #img {
+  width: 100%;
+  scale: 0.37;
+  border-radius: 50%;
+  transition: transform 0.5s, box-shadow 0.1s;
+  will-change: transform;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  transition: transform 0.3s;
+  top: -30%;
+  z-index: 12;
+}
+body > main > #paye {
+  width: 88%;
+  height: 240vh;
+  background-color: #ECEDDE;
+  top: 110%;
+  z-index: -1;
+  border-radius: 500px 500px 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body > main > #paye > #circle1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #B1C0A0;
+  position: absolute;
+  bottom: -13%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.2s ease;
+  z-index: 999;
+  transform-origin: -50%;
+  perspective: 1000px;
+  transition: 3s;
+}
+body > main > #paye > img {
+  width: 100%;
+  scale: 0.35;
+  position: absolute;
+  top: 105%;
+  left: 25%;
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  opacity: 1;
+}
+body > main > #paye > video {
+  width: 100%;
+  scale: 0.4;
+  position: absolute;
+  top: 85%;
+  right: 25%;
+  z-index: 9999;
+  transition: 0.5s;
+  opacity: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+body > main > #paye > .parent {
+  width: 40%;
+}
+body > main > #paye > .parent > #txt1 {
+  font-size: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #1B1C1E;
+  opacity: 0;
+  transition: 1s ease;
+}
+body > main > #paye > .parent > div {
+  width: 65%;
+  font-size: 40px;
+  color: #51733F;
+  border: 2px solid #51733F;
+  border-radius: 50px;
+  padding: 10px;
+  padding-inline: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+  transition: 2s ease;
+  margin-bottom: -300px;
+  opacity: 0;
+}
+body > main > #paye > .txt {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 380px;
+  transition: 2s ease;
+  margin-bottom: -300px;
+  opacity: 0;
+}
+body > main > #paye > .txt > #p1, body > main > #paye > .txt #p2 {
+  font-size: 24px;
+  margin-bottom: 10%;
+  text-align: justify;
+  color: rgba(27, 28, 30, 0.7960784314);
+  font-family: "satoshi";
+}
+body > main > #circle {
+  top: 317%;
+  left: 58%;
+}
+body > main > #circle > .c1 {
+  top: 360%;
+  right: 112%;
+  scale: 0.8;
+}
+body > main > #circle > .c2 {
+  top: 420%;
+  right: 40%;
+  scale: 1.3;
+}
+body > main > #circle > .c3 {
+  top: 380%;
+  right: 75%;
+}
+body > main > #circle > div {
+  position: absolute;
+  animation: rot linear 10s infinite;
+  z-index: -5;
+}
+body > main > #circle > div > img {
+  scale: 1.3;
+}
+body > main > #Portfolio {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 470%;
+  transition: 1s;
+}
+body > main > #Portfolio > p {
+  font-size: 60px;
+  position: absolute;
+  margin-top: 40%;
+  transition: 1s;
+  top: -50%;
+}
+body > main > #Portfolio > ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+body > main > #Portfolio > ul > li {
+  width: 30%;
+  list-style-type: none;
+  margin-block: 4%;
+  transition: 0.4s;
+  position: relative;
+}
+body > main > #Portfolio > ul > li:nth-of-type(1):hover > img {
+  scale: 1.1;
+}
+body > main > #Portfolio > ul > li:nth-of-type(2):hover > img {
+  scale: 1.2;
+}
+body > main > #Portfolio > ul > li:nth-of-type(3):hover > img {
+  scale: 0.9;
+}
+body > main > #Portfolio > ul > li:nth-of-type(4):hover > img {
+  scale: 1.1;
+}
+body > main > #Portfolio > ul > li:nth-of-type(5):hover > img {
+  scale: 1.3;
+}
+body > main > #Portfolio > ul > li:nth-of-type(6):hover > img {
+  scale: 1.5;
+}
+body > main > #Portfolio > ul > li > h4 {
+  font-size: 80px;
+  font-weight: 300;
+  margin-bottom: 2%;
+  position: sticky;
+  transition: 0.4s;
+}
+body > main > #Portfolio > ul > li > p {
+  font-size: 22px;
+  position: sticky;
+  font-family: "satoshi";
+  transition: 1s;
+}
+body > main > #Portfolio > ul > li > img {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  z-index: 10;
+  scale: 0;
+  transition: 0.5s;
+  pointer-events: none;
+}
+body > main > #Portfolio > ul > li > .ip1 {
+  top: -90%;
+  left: 70%;
+}
+body > main > #Portfolio > ul > li > .ip2 {
+  top: -20%;
+  left: -90%;
+}
+body > main > #Portfolio > ul > li > .ip3 {
+  top: -30%;
+  right: 80%;
+}
+body > main > #Portfolio > ul > li > .ip4 {
+  top: -5%;
+  right: -70%;
+}
+body > main > #Portfolio > ul > li > .ip5 {
+  top: -70%;
+  right: 60%;
+}
+body > main > #Portfolio > ul > li > .ip6 {
+  top: -5%;
+  right: -120%;
+}
+body > main > #key {
+  width: 88%;
+  height: 180vh;
+  background-color: #ECEDDE;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  position: absolute;
+  border-radius: 0px 0px 50% 50%;
+  top: 720%;
+  overflow: hidden;
+}
+body > main > #key > #top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transform: translateX(-1200px);
+  opacity: 0;
+  transition: 2s;
+}
+body > main > #key > #top > section {
+  width: 40%;
+}
+body > main > #key > #top > section > .tt {
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+body > main > #key > #top > section > .tt > p {
+  font-size: 80px;
+}
+body > main > #key > #top > section > .tt > p:nth-of-type(1) {
+  margin-right: 10px;
+}
+body > main > #key > #top > section > .tt > p:nth-of-type(2) {
+  font-style: italic;
+}
+body > main > #key > #top > section > .t1 {
+  width: 90%;
+  font-size: 40px;
+  color: #51733F;
+  border-radius: 50px;
+  border: 1px solid #51733F;
+  text-align: center;
+  margin-block: 20px;
+  padding: 5px;
+  margin-left: 10px;
+}
+body > main > #key > #top > section:nth-of-type(2) {
+  margin-left: 100px;
+}
+body > main > #key > #top > section:nth-of-type(2) > P {
+  font-size: 24px;
+  margin-block: 30px;
+  font-family: "satoshi";
+  color: rgba(27, 28, 30, 0.7960784314);
+}
+body > main > #key > #down {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 18%;
+  margin-top: 7%;
+  transform: translateY(500px);
+  opacity: 0;
+  transition: 1s;
+}
+body > main > #key > #down > section {
+  width: 38%;
+  height: 22vh;
+  background-color: white;
+  margin-inline: 5%;
+  margin-block: 2%;
+  border-radius: 150px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+body > main > #key > #down > section > img {
+  scale: 0.3;
+  position: absolute;
+}
+body > main > #key > #down > section > .i1 {
+  left: 6%;
+}
+body > main > #key > #down > section > .i2 {
+  left: 1%;
+}
+body > main > #key > #down > section > .i3 {
+  left: -12%;
+}
+body > main > #key > #down > section > .i4 {
+  scale: 0.37;
+}
+body > main > #key > #down > section > p {
+  font-size: 22px;
+  text-align: start;
+  margin-left: 150px;
+}
+body > main > #teacher {
+  width: 100%;
+  position: absolute;
+  top: 950%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > main > #teacher > h2 {
+  position: absolute;
+  bottom: 130%;
+  font-weight: 100;
+  font-size: 70px;
+  display: block;
+}
+body > main > #teacher > div {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+body > main > #teacher > div > p {
+  width: 30%;
+  font-size: 22px;
+  font-family: "satoshi";
+  font-weight: 500;
+  color: #1B1C1E;
+  text-align: justify;
+}
+body > main > #photos {
+  width: 80%;
+  height: 200vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 199;
+  top: 1000%;
+  perspective: 1000px;
+}
+body > main > #photos > * {
+  will-change: transform;
+  transition: 0.3s;
+}
+body > main > #photos > #pic1 {
+  width: 30%;
+  height: auto;
+  position: absolute;
+  left: 55%;
+  top: 320%;
+  rotate: 2deg;
+}
+body > main > #photos > #pic1 > .font {
+  font-size: 25px;
+}
+body > main > #photos > #pic1 > p {
+  font-size: 30px;
+  margin-block: 10px;
+}
+body > main > #photos > #pic1 > img {
+  scale: 1;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.1s;
+}
+body > main > #photos > #pic2 {
+  width: 35%;
+  height: auto;
+  position: absolute;
+  left: 10%;
+  top: 150%;
+  rotate: -3deg;
+}
+body > main > #photos > #pic2 > .font {
+  font-size: 25px;
+}
+body > main > #photos > #pic2 > p {
+  font-size: 33px;
+  padding-block: 13px;
+}
+body > main > #photos > #pic2 > img {
+  scale: 1;
+  width: 100%;
+  height: 100%;
+}
+body > main > #photos > #pic3 {
+  width: 25%;
+  height: auto;
+  position: absolute;
+  left: 70%;
+  top: 40%;
+  rotate: -4deg;
+}
+body > main > #photos > #pic3 > .font {
+  font-size: 25px;
+}
+body > main > #photos > #pic3 > p {
+  font-size: 30px;
+  padding-block: 10px;
+}
+body > main > #photos > #pic3 > img {
+  scale: 1;
+  width: 100%;
+  height: 100%;
+}
+body > main > #photos > #pic4 {
+  width: 30%;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+body > main > #photos > #pic4 > .font {
+  font-size: 25px;
+}
+body > main > #photos > #pic4 > p {
+  font-size: 30px;
+  padding-block: 10px;
+}
+body > main > #photos > #pic4 > img {
+  scale: 1;
+  width: 100%;
+  height: 100%;
+}
+body > main > #photos > #pic5 {
+  width: 30%;
+  height: auto;
+  position: absolute;
+  left: 60%;
+  top: 230%;
+  rotate: 3deg;
+}
+body > main > #photos > #pic5 > .font {
+  font-size: 25px;
+}
+body > main > #photos > #pic5 > p {
+  font-size: 30px;
+  padding-block: 10px;
+}
+body > main > #photos > #pic5 > img {
+  width: 100%;
+  height: 100%;
+}
+body > main > #photos > #pic6 {
+  width: 25%;
+  height: auto;
+  position: absolute;
+  top: 250%;
+  left: 25%;
+}
+body > main > #photos > #pic6 > .font {
+  font-size: 25px;
+}
+body > main > #photos > #pic6 > p {
+  font-size: 35px;
+  padding-block: 15px;
+}
+body > main > #photos > #pic6 > img {
+  width: 100%;
+  height: 100%;
+}
+body > main > #photos > #pic7 {
+  width: 30%;
+  height: auto;
+  position: absolute;
+  left: 40%;
+  top: 5%;
+  rotate: -6deg;
+}
+body > main > #photos > #pic7 > .font {
+  font-size: 25px;
+}
+body > main > #photos > #pic7 > p {
+  font-size: 30px;
+  padding-block: 10px;
+}
+body > main > #photos > #pic7 > img {
+  width: 100%;
+  height: 100%;
+}
+body > main > #sun {
+  background-color: #F5F5EB;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 1000%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body > main > #sun > #Mentorship {
+  width: 1200px;
+  height: 180vh;
+  background-color: #E0E1D1;
+  position: absolute;
+  top: 90%;
+  border-radius: 0 0 600px 600px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+}
+body > main > #sun > #Mentorship > #mentortitle {
+  width: 35%;
+  font-size: 80px;
+  font-weight: 100;
+  margin-right: 3%;
+  font-style: italic;
+}
+body > main > #sun > #Mentorship > ul {
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 3%;
+}
+body > main > #sun > #Mentorship > ul > li {
+  width: 70%;
+  list-style-type: none;
+  margin-block: 2%;
+}
+body > main > #sun > #Mentorship > ul > li > h4 {
+  font-size: 40px;
+  font-weight: 500;
+  padding-block: 4%;
+}
+body > main > #sun > #Mentorship > ul > li > div {
+  display: flex;
+  justify-content: space-between;
+}
+body > main > #sun > #Mentorship > ul > li > div > section {
+  width: 50%;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.856);
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "satoshi";
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.925);
+  color: #D2D3C3;
+}
+body > main > #sun > #Mentorship > ul > li > div > button {
+  width: 40%;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 50px;
+  text-align: center;
+  font-family: "satoshi";
+  font-size: 18px;
+  background-color: rgba(170, 39, 39, 0);
+}
+body > main > #about {
+  width: 100%;
+  top: 1600%;
+}
+body > main > #about > #title-about {
+  margin-left: 15%;
+  width: 40%;
+  font-size: 80px;
+  font-weight: 500;
+  font-style: italic;
+}
+body > main > #about > #logos {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+body > main > #about > #logos > #sec1 {
+  width: 25%;
+}
+body > main > #about > #logos > #sec1 > figure {
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgba(0, 0, 0, 0.692);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #F5F5EB;
+  cursor: pointer;
+  transition: 0.4s;
+}
+body > main > #about > #logos > #sec1 > figure:hover {
+  scale: 1.1;
+}
+body > main > #about > #logos > #sec1 > figure:nth-of-type(1) {
+  top: 50%;
+  left: 8%;
+}
+body > main > #about > #logos > #sec1 > figure:nth-of-type(2) {
+  top: 65%;
+  left: 19%;
+}
+body > main > #about > #logos > #sec1 > figure:nth-of-type(3) {
+  top: 80%;
+  left: 0%;
+}
+body > main > #about > #logos > #sec1 > figure:nth-of-type(4) {
+  top: 95%;
+  left: 25%;
+}
+body > main > #about > #logos > #sec1 > figure > img {
+  width: 130px;
+  height: auto;
+}
+body > main > #about > #logos > #tvsec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+body > main > #about > #logos > #tvsec > #tv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  transition: 1s;
+}
+body > main > #about > #logos > #sec2 {
+  width: 25%;
+}
+body > main > #about > #logos > #sec2 > figure {
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgba(0, 0, 0, 0.692);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #f5f5eb;
+  cursor: pointer;
+  transition: 0.4s;
+}
+body > main > #about > #logos > #sec2 > figure:hover {
+  scale: 1.1;
+}
+body > main > #about > #logos > #sec2 > figure:nth-of-type(1) {
+  top: 50%;
+  left: 85%;
+}
+body > main > #about > #logos > #sec2 > figure:nth-of-type(2) {
+  top: 65%;
+  left: 70%;
+}
+body > main > #about > #logos > #sec2 > figure:nth-of-type(3) {
+  top: 35%;
+  left: 65%;
+}
+body > main > #about > #logos > #sec2 > figure:nth-of-type(4) {
+  width: 190px;
+  height: 190px;
+  top: 20%;
+  left: 85%;
+}
+body > main > #about > #logos > #sec2 > figure:nth-of-type(4) > img {
+  scale: 1.2;
+}
+body > main > #about > #logos > #sec2 > figure > img {
+  width: 120px;
+  height: auto;
+}
+body > main #help {
+  width: 88%;
+  height: 160vh;
+  background-color: #E0E1D1;
+  position: absolute;
+  top: 1800%;
+  z-index: 10;
+  border-radius: 650px 650px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body > main #help > img {
+  width: 50%;
+  scale: 1.7;
+  position: absolute;
+  top: 15%;
+}
+body > main #help > section {
+  position: relative;
+  top: 10%;
+  width: 60%;
+  height: 60%;
+  border-radius: 650px 650px 0 0;
+}
+body > main #help > section > .dayere {
+  width: 180px;
+  height: 180px;
+  padding: 8%;
+  border-radius: 50%;
+  border: #1B1C1E 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-align: center;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(0, 0, 0, 0.7960784314);
+  transition: 0.5s;
+}
+body > main #help > section > .dayere:hover {
+  background-color: rgba(0, 0, 0, 0.7450980392);
+  color: #D2D3C3;
+}
+body > main #help > section > .dayere:nth-of-type(1) {
+  top: 35%;
+  left: 40%;
+  animation: anime5 5s infinite 10s ease-in-out;
+}
+body > main #help > section > .dayere:nth-of-type(2) {
+  top: 55%;
+  left: 20%;
+  animation: anime3 5s infinite 6s ease-in-out;
+}
+body > main #help > section > .dayere:nth-of-type(3) {
+  top: 5%;
+  left: 40%;
+  animation: anime2 5s infinite 4s ease-in-out;
+}
+body > main #help > section > .dayere:nth-of-type(4) {
+  top: 20%;
+  left: 10%;
+  animation: anime1 5s infinite 2s ease-in-out;
+}
+body > main #help > section > .dayere:nth-of-type(5) {
+  top: 30%;
+  left: 70%;
+  animation: anime4 5s infinite 8s ease-in-out;
+}
+body > main #help > .contact {
+  width: 90%;
+  height: 30vh;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+body > main #help > .contact > #kesho {
+  width: 25%;
+  height: 10vh;
+  border-radius: 50px;
+  padding-left: 20px;
+  font-size: 25px;
+  font-family: "satoshi";
+  color: rgba(27, 28, 30, 0.8470588235);
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.822);
+}
+body > main #help > .contact > #kesho > option {
+  background-color: #E0E1D1;
+}
+body > main #help > .contact > input {
+  width: 25%;
+  height: 10vh;
+  border-radius: 50px;
+  padding-left: 20px;
+  font-size: 25px;
+  font-family: "satoshi";
+  color: #1b1c1e;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.822);
+  margin-inline: 15px;
+}
+body > main #help > .contact > input::-moz-placeholder {
+  color: #1b1c1e;
+}
+body > main #help > .contact > input::placeholder {
+  color: #1b1c1e;
+}
+body > main #help > .contact > input:nth-of-type(3) {
+  width: 100%;
+}
+body > main #help > .contact > input:nth-of-type(2) {
+  width: 40%;
+}
+@keyframes elevator {
+  0% {
+    margin-top: 0%;
+  }
+  25% {
+    margin-top: -18%;
+  }
+  50% {
+    margin-top: -36%;
+  }
+  75% {
+    margin-top: -18%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+@keyframes tab {
+  0% {
+    rotate: 20deg;
+  }
+  30% {
+    rotate: -20deg;
+  }
+  60% {
+    rotate: 10deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+@keyframes rot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Portfolio {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+@keyframes sun {
+  from {
+    width: 900px;
+    height: 900px;
+  }
+  to {
+    width: 2500px;
+    height: 2500px;
+  }
+}
+@keyframes anime1 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(10px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+@keyframes anime2 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(2px) translateX(5px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+@keyframes anime3 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(6px) translateX(9px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+@keyframes anime4 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(5px) translateX(4px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+@keyframes anime5 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(10px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+body .sunanimation {
+  animation: sun 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+body .tab {
+  animation: tab 1s;
+  animation-iteration-count: 1;
+}
+body .not-active {
+  color: rgba(0, 0, 0, 0.438);
+  transition: 0.4s;
+}
+body .not-active > h4 {
+  z-index: -1;
+}
+body .not-active > p {
+  z-index: -1;
+}
+body .active {
+  color: #51733F;
+  transition: 1s;
+  animation: Portfolio 0.4s forwards;
+}
+body .active > h4 {
+  z-index: 999;
+}
+body .active > p {
+  z-index: 999;
+}
+body .font {
+  font-family: "satoshi";
+}
+body .smooth {
+  position: fixed !important;
+  transition: transform 0.5s linear;
+}
+body .tvstep1 {
+  scale: 0.001;
+  opacity: 0.2;
+}
+body .tvstep2 {
+  scale: 1;
+  opacity: 1;
+}/*# sourceMappingURL=copyscss.css.map */

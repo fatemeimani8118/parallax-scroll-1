@@ -1,0 +1,5109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "MyCustomFont";
+  src: url(../font/Austin-Light-Trial-BF662b0bb2d983a.otf) format("truetype");
+}
+@font-face {
+  font-family: "satoshi";
+  src: url(../font/Satoshi_Complete/Fonts/OTF/Satoshi-Regular.otf);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #D2D3C3;
+  font-family: "MyCustomFont";
+  overflow-x: hidden;
+  transition: transform 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > main > div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > main > div > .section {
+  width: 1px;
+  height: 2450vh;
+  background-color: rgba(255, 255, 255, 0.548);
+  margin-inline: 10px;
+  z-index: -1;
+}
+body > main > header {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  left: 0;
+}
+body > main > header > button {
+  width: 15%;
+  margin: 15px;
+  height: 8vh;
+  border-radius: 50px;
+  display: flex;
+  padding-left: 0.5%;
+  border: 1px solid white;
+  background-color: white;
+  font-family: "satoshi";
+}
+body > main > header > button > img {
+  scale: 0.8;
+  margin: 2%;
+}
+body > main > header > button > ul {
+  margin-left: 1%;
+  margin-top: 0;
+}
+body > main > header > button > ul > li {
+  list-style-type: none;
+  text-align: start;
+  font-size: 16px;
+  font-family: "satoshi";
+}
+body > main > header > #par {
+  width: 75%;
+  display: flex;
+  justify-content: end;
+  margin-right: 1%;
+}
+body > main > header > #par > button {
+  border-radius: 50px;
+  border: 1px solid white;
+  background-color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+body > main > header > #par > #b1 {
+  border-radius: 50px 0 0 50px;
+}
+body > main > header > #par > #b2 {
+  border-radius: 0 0 0 0;
+}
+body > main > header > #par > #b3 {
+  border-radius: 0 50px 50px 0;
+}
+body > main > header > #par > #b4 {
+  width: 15%;
+  border-radius: 50px;
+  background-color: #51733F;
+  border: #51733F 1px solid;
+  color: white;
+  margin-left: 2%;
+}
+body > main > #mid {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  perspective: 1000px;
+}
+body > main > #mid > #half {
+  transition: rotate 1s ease;
+  rotate: 0deg;
+  background-color: #f5f5eb;
+  overflow: hidden;
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 35%;
+  transform-origin: top center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+}
+body > main > #mid > #half > p {
+  text-align: center;
+  color: #1B1C1E;
+}
+body > main > #mid > p {
+  position: absolute;
+  z-index: 99;
+  pointer-events: none;
+  color: #1B1C1E;
+}
+body > main > #mid > #first {
+  top: 5%;
+  left: 27%;
+}
+body > main > #mid > #last {
+  top: 18%;
+  left: 39%;
+}
+body > main > #mid > #img {
+  width: 100%;
+  scale: 0.37;
+  border-radius: 50%;
+  transition: transform 0.5s, box-shadow 0.1s;
+  will-change: transform;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  transition: transform 0.3s;
+  top: -30%;
+  z-index: 12;
+}
+body > main > #paye {
+  width: 88%;
+  height: 240vh;
+  background-color: #ECEDDE;
+  top: 110%;
+  z-index: -1;
+  border-radius: 500px 500px 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body > main > #paye > #circle1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #B1C0A0;
+  position: absolute;
+  bottom: -13%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.2s ease;
+  z-index: 999;
+  transform-origin: -50%;
+  perspective: 1000px;
+  transition: 3s;
+}
+body > main > #paye > img {
+  width: 100%;
+  scale: 0.35;
+  position: absolute;
+  top: 105%;
+  left: 25%;
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  opacity: 1;
+}
+body > main > #paye > video {
+  width: 100%;
+  scale: 0.4;
+  position: absolute;
+  top: 85%;
+  right: 25%;
+  z-index: 9999;
+  transition: 0.5s;
+  opacity: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+body > main > #paye > .parent {
+  width: 40%;
+}
+body > main > #paye > .parent > #txt1 {
+  font-size: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #1B1C1E;
+  opacity: 0;
+  transition: 1s ease;
+}
+body > main > #paye > .parent > div {
+  width: 65%;
+  font-size: 40px;
+  color: #51733F;
+  border: 2px solid #51733F;
+  border-radius: 50px;
+  padding: 10px;
+  padding-inline: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+  transition: 2s ease;
+  margin-bottom: -300px;
+  opacity: 0;
+}
+body > main > #paye > .txt {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 380px;
+  transition: 2s ease;
+  margin-bottom: -300px;
+  opacity: 0;
+}
+body > main > #paye > .txt > #p1, body > main > #paye > .txt #p2 {
+  font-size: 24px;
+  margin-bottom: 10%;
+  text-align: justify;
+  color: rgba(27, 28, 30, 0.7960784314);
+  font-family: "satoshi";
+}
+body > main > #circle {
+  top: 317%;
+  left: 58%;
+}
+body > main > #circle > .c1 {
+  top: 360%;
+  right: 112%;
+  scale: 0.8;
+}
+body > main > #circle > .c2 {
+  top: 420%;
+  right: 40%;
+  scale: 1.3;
+}
+body > main > #circle > .c3 {
+  top: 380%;
+  right: 75%;
+}
+body > main > #circle > div {
+  position: absolute;
+  animation: rot linear 10s infinite;
+  z-index: -5;
+}
+body > main > #circle > div > img {
+  scale: 1.3;
+}
+body > main > #Portfolio {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 470%;
+}
+body > main > #Portfolio > p {
+  font-size: 60px;
+  position: absolute;
+  margin-top: 40%;
+  transition: 1s;
+  top: -50%;
+}
+body > main > #Portfolio > ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+body > main > #Portfolio > ul > li {
+  width: 30%;
+  list-style-type: none;
+  margin-block: 4%;
+  transition: 0.4s;
+  position: relative;
+}
+body > main > #Portfolio > ul > li:nth-of-type(1):hover > img {
+  scale: 1.1;
+}
+body > main > #Portfolio > ul > li:nth-of-type(2):hover > img {
+  scale: 1.2;
+}
+body > main > #Portfolio > ul > li:nth-of-type(3):hover > img {
+  scale: 0.9;
+}
+body > main > #Portfolio > ul > li:nth-of-type(4):hover > img {
+  scale: 1.1;
+}
+body > main > #Portfolio > ul > li:nth-of-type(5):hover > img {
+  scale: 1.3;
+}
+body > main > #Portfolio > ul > li:nth-of-type(6):hover > img {
+  scale: 1.5;
+}
+body > main > #Portfolio > ul > li > h4 {
+  font-size: 80px;
+  font-weight: 300;
+  margin-bottom: 2%;
+  position: sticky;
+  transition: 0.4s;
+}
+body > main > #Portfolio > ul > li > p {
+  font-size: 22px;
+  position: sticky;
+  font-family: "satoshi";
+  transition: 1s;
+}
+body > main > #Portfolio > ul > li > img {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  z-index: 10;
+  scale: 0;
+  transition: 0.5s;
+  pointer-events: none;
+}
+body > main > #Portfolio > ul > li > .ip1 {
+  top: -90%;
+  left: 70%;
+}
+body > main > #Portfolio > ul > li > .ip2 {
+  top: -20%;
+  left: -90%;
+}
+body > main > #Portfolio > ul > li > .ip3 {
+  top: -30%;
+  right: 80%;
+}
+body > main > #Portfolio > ul > li > .ip4 {
+  top: -5%;
+  right: -70%;
+}
+body > main > #Portfolio > ul > li > .ip5 {
+  top: -70%;
+  right: 60%;
+}
+body > main > #Portfolio > ul > li > .ip6 {
+  top: -5%;
+  right: -120%;
+}
+body > main > #key {
+  width: 88%;
+  height: 180vh;
+  background-color: #ECEDDE;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  position: absolute;
+  border-radius: 0px 0px 50% 50%;
+  top: 820%;
+  overflow: hidden;
+  will-change: transform;
+}
+body > main > #key > #top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-1200px);
+  opacity: 0;
+  transition: 2s;
+}
+body > main > #key > #top > section {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+body > main > #key > #top > section > .tt {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+}
+body > main > #key > #top > section > .tt > p {
+  font-size: 80px;
+}
+body > main > #key > #top > section > .tt > p:nth-of-type(1) {
+  margin-right: 10px;
+}
+body > main > #key > #top > section > .tt > p:nth-of-type(2) {
+  font-style: italic;
+}
+body > main > #key > #top > section > .t1 {
+  width: 90%;
+  font-size: 40px;
+  color: #51733F;
+  border-radius: 50px;
+  border: 1px solid #51733F;
+  text-align: center;
+  margin-block: 20px;
+  padding: 5px;
+  margin-left: 10px;
+}
+body > main > #key > #top > section:nth-of-type(2) {
+  margin-left: 100px;
+}
+body > main > #key > #top > section:nth-of-type(2) > P {
+  font-size: 24px;
+  margin-block: 30px;
+  font-family: "satoshi";
+  color: rgba(27, 28, 30, 0.7960784314);
+  text-align: justify;
+}
+body > main > #key > #down {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 18%;
+  margin-top: 7%;
+  transform: translateY(500px);
+  opacity: 0;
+  transition: 1s;
+}
+body > main > #key > #down > section {
+  width: 38%;
+  height: 22vh;
+  background-color: white;
+  margin-inline: 5%;
+  margin-block: 2%;
+  border-radius: 150px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+body > main > #key > #down > section > img {
+  scale: 0.3;
+  position: absolute;
+}
+body > main > #key > #down > section > .i1 {
+  left: 6%;
+}
+body > main > #key > #down > section > .i2 {
+  left: 1%;
+}
+body > main > #key > #down > section > .i3 {
+  left: -12%;
+}
+body > main > #key > #down > section > .i4 {
+  scale: 0.37;
+}
+body > main > #key > #down > section > p {
+  font-size: 22px;
+  text-align: start;
+  margin-left: 150px;
+}
+body > main > #teacher {
+  width: 100%;
+  position: absolute;
+  top: 1050%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > main > #teacher > h2 {
+  position: absolute;
+  bottom: 130%;
+  font-weight: 100;
+  font-size: 70px;
+  display: block;
+}
+body > main > #teacher > div {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+body > main > #teacher > div > p {
+  width: 30%;
+  font-size: 22px;
+  font-family: "satoshi";
+  font-weight: 500;
+  color: #1B1C1E;
+  text-align: justify;
+}
+body > main > #photos {
+  width: 80%;
+  height: 200vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 199;
+  top: 1100%;
+  perspective: 1000px;
+}
+body > main > #photos > * {
+  will-change: transform;
+  transition: 0.3s;
+}
+body > main > #photos > #pic1 {
+  width: 30%;
+  height: auto;
+  position: absolute;
+  left: 55%;
+  top: 320%;
+  rotate: 2deg;
+}
+body > main > #photos > #pic1 > .font {
+  font-size: 25px;
+}
+body > main > #photos > #pic1 > p {
+  font-size: 30px;
+  margin-block: 10px;
+}
+body > main > #photos > #pic1 > img {
+  scale: 1;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.1s;
+}
+body > main > #photos > #pic2 {
+  width: 35%;
+  height: auto;
+  position: absolute;
+  left: 10%;
+  top: 150%;
+  rotate: -3deg;
+}
+body > main > #photos > #pic2 > .font {
+  font-size: 25px;
+}
+body > main > #photos > #pic2 > p {
+  font-size: 33px;
+  padding-block: 13px;
+}
+body > main > #photos > #pic2 > img {
+  scale: 1;
+  width: 100%;
+  height: 100%;
+}
+body > main > #photos > #pic3 {
+  width: 25%;
+  height: auto;
+  position: absolute;
+  left: 70%;
+  top: 40%;
+  rotate: -4deg;
+}
+body > main > #photos > #pic3 > .font {
+  font-size: 25px;
+}
+body > main > #photos > #pic3 > p {
+  font-size: 30px;
+  padding-block: 10px;
+}
+body > main > #photos > #pic3 > img {
+  scale: 1;
+  width: 100%;
+  height: 100%;
+}
+body > main > #photos > #pic4 {
+  width: 30%;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+body > main > #photos > #pic4 > .font {
+  font-size: 25px;
+}
+body > main > #photos > #pic4 > p {
+  font-size: 30px;
+  padding-block: 10px;
+}
+body > main > #photos > #pic4 > img {
+  scale: 1;
+  width: 100%;
+  height: 100%;
+}
+body > main > #photos > #pic5 {
+  width: 30%;
+  height: auto;
+  position: absolute;
+  left: 30%;
+  top: 230%;
+  rotate: -7deg;
+}
+body > main > #photos > #pic5 > .font {
+  font-size: 25px;
+}
+body > main > #photos > #pic5 > p {
+  font-size: 30px;
+  padding-block: 10px;
+}
+body > main > #photos > #pic5 > img {
+  width: 100%;
+  height: 100%;
+}
+body > main > #photos > #pic6 {
+  width: 25%;
+  height: auto;
+  position: absolute;
+  top: 250%;
+  left: 25%;
+}
+body > main > #photos > #pic6 > .font {
+  font-size: 25px;
+}
+body > main > #photos > #pic6 > p {
+  font-size: 35px;
+  padding-block: 15px;
+}
+body > main > #photos > #pic6 > img {
+  width: 100%;
+  height: 100%;
+}
+body > main > #photos > #pic7 {
+  width: 30%;
+  height: auto;
+  position: absolute;
+  left: 40%;
+  top: -20%;
+  rotate: -6deg;
+}
+body > main > #photos > #pic7 > .font {
+  font-size: 25px;
+}
+body > main > #photos > #pic7 > p {
+  font-size: 30px;
+  padding-block: 10px;
+}
+body > main > #photos > #pic7 > img {
+  width: 100%;
+  height: 100%;
+}
+body > main > #sun {
+  background-color: #F5F5EB;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 1100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body > main > #sun > #Mentorship {
+  width: 1200px;
+  height: 180vh;
+  background-color: #E0E1D1;
+  position: absolute;
+  top: 90%;
+  border-radius: 0 0 600px 600px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+}
+body > main > #sun > #Mentorship > #mentortitle {
+  width: 35%;
+  font-size: 80px;
+  font-weight: 100;
+  margin-right: 3%;
+  font-style: italic;
+}
+body > main > #sun > #Mentorship > ul {
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 3%;
+}
+body > main > #sun > #Mentorship > ul > li {
+  width: 70%;
+  list-style-type: none;
+  margin-block: 2%;
+}
+body > main > #sun > #Mentorship > ul > li > h4 {
+  font-size: 7vw;
+  font-weight: 500;
+  padding-block: 4%;
+}
+body > main > #sun > #Mentorship > ul > li > div {
+  display: flex;
+  justify-content: space-between;
+}
+body > main > #sun > #Mentorship > ul > li > div > section {
+  width: 50%;
+  height: 9vw;
+  border: 1px solid rgba(0, 0, 0, 0.856);
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "satoshi";
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.925);
+  color: #D2D3C3;
+}
+body > main > #sun > #Mentorship > ul > li > div > button {
+  width: 40%;
+  height: 9vw;
+  border: 1px solid black;
+  border-radius: 50px;
+  text-align: center;
+  font-family: "satoshi";
+  font-size: 4vw;
+  background-color: rgba(170, 39, 39, 0);
+}
+body > main > #about {
+  width: 100%;
+  top: 1700%;
+  transition: 0.1s;
+}
+body > main > #about > #title-about {
+  margin-left: 15%;
+  width: 40%;
+  font-size: 80px;
+  font-weight: 500;
+  font-style: italic;
+}
+body > main > #about > #logos {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+body > main > #about > #logos > #sec1 {
+  width: 25%;
+}
+body > main > #about > #logos > #sec1 > figure {
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgba(0, 0, 0, 0.692);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #F5F5EB;
+  cursor: pointer;
+  transition: 0.4s;
+}
+body > main > #about > #logos > #sec1 > figure:hover {
+  scale: 1.1;
+}
+body > main > #about > #logos > #sec1 > figure:nth-of-type(1) {
+  top: 50%;
+  left: 8%;
+}
+body > main > #about > #logos > #sec1 > figure:nth-of-type(2) {
+  top: 65%;
+  left: 19%;
+}
+body > main > #about > #logos > #sec1 > figure:nth-of-type(3) {
+  top: 80%;
+  left: 0%;
+}
+body > main > #about > #logos > #sec1 > figure:nth-of-type(4) {
+  top: 95%;
+  left: 25%;
+}
+body > main > #about > #logos > #sec1 > figure > img {
+  width: 130px;
+  height: auto;
+}
+body > main > #about > #logos > #tvsec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+body > main > #about > #logos > #tvsec > #tv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  transition: 1s;
+}
+body > main > #about > #logos > #sec2 {
+  width: 25%;
+}
+body > main > #about > #logos > #sec2 > figure {
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgba(0, 0, 0, 0.692);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #f5f5eb;
+  cursor: pointer;
+  transition: 0.4s;
+}
+body > main > #about > #logos > #sec2 > figure:hover {
+  scale: 1.1;
+}
+body > main > #about > #logos > #sec2 > figure:nth-of-type(1) {
+  top: 50%;
+  left: 85%;
+}
+body > main > #about > #logos > #sec2 > figure:nth-of-type(2) {
+  top: 65%;
+  left: 70%;
+}
+body > main > #about > #logos > #sec2 > figure:nth-of-type(3) {
+  top: 35%;
+  left: 65%;
+}
+body > main > #about > #logos > #sec2 > figure:nth-of-type(4) {
+  width: 190px;
+  height: 190px;
+  top: 20%;
+  left: 85%;
+}
+body > main > #about > #logos > #sec2 > figure:nth-of-type(4) > img {
+  scale: 1.2;
+}
+body > main > #about > #logos > #sec2 > figure > img {
+  width: 120px;
+  height: auto;
+}
+body > main #help {
+  width: 88%;
+  height: 160vh;
+  background-color: #E0E1D1;
+  position: absolute;
+  top: 1800%;
+  z-index: 10;
+  border-radius: 650px 650px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body > main #help > img {
+  width: 50%;
+  scale: 1.7;
+  position: absolute;
+  top: 15%;
+}
+body > main #help > section {
+  position: relative;
+  top: 10%;
+  width: 60%;
+  height: 60%;
+  border-radius: 650px 650px 0 0;
+}
+body > main #help > section > .dayere {
+  width: 180px;
+  height: 180px;
+  padding: 8%;
+  border-radius: 50%;
+  border: #1B1C1E 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-align: center;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(0, 0, 0, 0.7960784314);
+  transition: 0.5s;
+}
+body > main #help > section > .dayere:hover {
+  background-color: rgba(0, 0, 0, 0.7450980392);
+  color: #D2D3C3;
+}
+body > main #help > section > .dayere:nth-of-type(1) {
+  top: 35%;
+  left: 40%;
+  animation: anime5 5s infinite 10s ease-in-out;
+}
+body > main #help > section > .dayere:nth-of-type(2) {
+  top: 55%;
+  left: 20%;
+  animation: anime3 5s infinite 6s ease-in-out;
+}
+body > main #help > section > .dayere:nth-of-type(3) {
+  top: 5%;
+  left: 40%;
+  animation: anime2 5s infinite 4s ease-in-out;
+}
+body > main #help > section > .dayere:nth-of-type(4) {
+  top: 20%;
+  left: 10%;
+  animation: anime1 5s infinite 2s ease-in-out;
+}
+body > main #help > section > .dayere:nth-of-type(5) {
+  top: 30%;
+  left: 70%;
+  animation: anime4 5s infinite 8s ease-in-out;
+}
+body > main #help > .contact {
+  width: 90%;
+  height: 30vh;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+body > main #help > .contact > #kesho {
+  width: 25%;
+  height: 10vh;
+  border-radius: 50px;
+  padding-left: 20px;
+  font-size: 25px;
+  font-family: "satoshi";
+  color: rgba(27, 28, 30, 0.8470588235);
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.822);
+}
+body > main #help > .contact > #kesho > option {
+  background-color: #E0E1D1;
+}
+body > main #help > .contact > input {
+  width: 25%;
+  height: 10vh;
+  border-radius: 50px;
+  padding-left: 20px;
+  font-size: 25px;
+  font-family: "satoshi";
+  color: #1b1c1e;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.822);
+  margin-inline: 15px;
+}
+body > main #help > .contact > input::-moz-placeholder {
+  color: #1b1c1e;
+}
+body > main #help > .contact > input::placeholder {
+  color: #1b1c1e;
+}
+body > main #help > .contact > input:nth-of-type(3) {
+  width: 100%;
+}
+body > main #help > .contact > input:nth-of-type(2) {
+  width: 40%;
+}
+body > main > #footer {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  z-index: 99999;
+  left: 0;
+  margin: 2vw;
+  border-radius: 50%;
+  background-image: url(../img/ball-texture-copy.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > main > #footer > img {
+  width: 7vw;
+  height: 7vw;
+  border-radius: 50%;
+}
+body > main > #footer > section {
+  position: absolute;
+  margin-bottom: 200%;
+}
+
+@media (min-width: 320px) {
+  body > main > div > .section {
+    height: 1400vh;
+    margin-inline: 6px;
+  }
+  body > main > div > .section:nth-of-type(6) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(7) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(8) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(9) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(10) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(11) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(12) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(13) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(14) {
+    display: none;
+  }
+  body > main > header {
+    height: 8vh;
+  }
+  body > main > header > button {
+    width: 15%;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body > main > header > button > img {
+    scale: 0.9;
+    margin: 1%;
+  }
+  body > main > header > button > ul {
+    display: none;
+  }
+  body > main > header > #par {
+    flex-direction: row-reverse;
+  }
+  body > main > header > #par > button {
+    height: 6vh;
+    margin: 15px;
+    margin-inline: 0.1%;
+    margin-block: 8%;
+  }
+  body > main > header > #par > #b1 {
+    display: none;
+  }
+  body > main > header > #par > #b2 {
+    display: none;
+  }
+  body > main > header > #par > #b3 {
+    display: none;
+  }
+  body > main > header > #par > #b4 {
+    width: 30%;
+    font-size: 4.2vw;
+  }
+  body > main > header > #par > #shortmenu {
+    width: 17%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+    display: flex;
+  }
+  body > main > header > #par > #shortmenu > img {
+    width: 100%;
+    scale: 0.57;
+  }
+  body > main > #mid {
+    top: 55%;
+  }
+  body > main > #mid > #half {
+    width: 94%;
+    height: 50vw;
+  }
+  body > main > #mid > #half > p {
+    font-size: 7vw;
+    width: 70%;
+    margin-bottom: 8%;
+  }
+  body > main > #mid > p {
+    font-size: 16vw;
+  }
+  body > main > #mid > #first {
+    top: -20%;
+    left: 15%;
+  }
+  body > main > #mid > #last {
+    top: 0%;
+    left: 35%;
+  }
+  body > main > #mid > #img {
+    scale: 0.55;
+    top: -40%;
+  }
+  body > main > #paye {
+    height: 120vh;
+    top: 90%;
+    align-items: center;
+    flex-direction: column;
+  }
+  body > main > #paye > #circle1 {
+    transform: translateX(-45%) translateY(-25%);
+    transform-origin: 50%, 50%;
+    scale: 0.9;
+  }
+  body > main > #paye > img {
+    scale: 0.5;
+    top: 145%;
+  }
+  body > main > #paye > video {
+    top: 110%;
+  }
+  body > main > #paye > .parent {
+    width: 80%;
+    margin-top: 60%;
+  }
+  body > main > #paye > .parent > #txt1 {
+    width: 100%;
+    font-size: 11vw;
+    margin-top: -30vw;
+  }
+  body > main > #paye > .parent > div {
+    width: 60%;
+    font-size: 4.5vw;
+    padding: 5px;
+    border: 1px solid #51733F;
+  }
+  body > main > #paye > .txt {
+    width: 80%;
+    margin-top: -30vw;
+  }
+  body > main > #paye > .txt > #p1, body > main > #paye > .txt #p2 {
+    font-size: 4.5vw;
+  }
+  body > main > #Portfolio {
+    top: 280%;
+  }
+  body > main > #Portfolio > p {
+    font-size: 2vw;
+    top: -50%;
+  }
+  body > main > #Portfolio > ul > li {
+    width: 40%;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(1):hover > img {
+    scale: 0.25;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(2):hover > img {
+    scale: 0.25;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(3):hover > img {
+    scale: 0.25;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(4):hover > img {
+    scale: 0.25;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(5):hover > img {
+    scale: 0.25;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(6):hover > img {
+    scale: 0.25;
+  }
+  body > main > #Portfolio > ul > li > h4 {
+    font-size: 7.5vw;
+  }
+  body > main > #Portfolio > ul > li > p {
+    font-size: 3vw;
+  }
+  body > main > #Portfolio > ul > li > .ip1 {
+    top: -35vh;
+    left: -23vw;
+  }
+  body > main > #Portfolio > ul > li > .ip2 {
+    top: -35vh;
+    left: -75vw;
+  }
+  body > main > #Portfolio > ul > li > .ip3 {
+    top: -32vh;
+    left: -67vw;
+  }
+  body > main > #Portfolio > ul > li > .ip4 {
+    top: -30vh;
+    left: -65vw;
+  }
+  body > main > #Portfolio > ul > li > .ip5 {
+    top: -32vh;
+    left: -20vw;
+  }
+  body > main > #Portfolio > ul > li > .ip6 {
+    top: -32vh;
+    left: -21vw;
+  }
+  body > main > #key {
+    height: 130vh;
+    border-radius: 0px 0px 500px 500px;
+    padding-top: 0%;
+    top: 420%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body > main > #key > #top {
+    width: 90%;
+    flex-direction: column;
+    margin-top: 0%;
+  }
+  body > main > #key > #top > section {
+    margin: 0 0%;
+  }
+  body > main > #key > #top > section > .tt {
+    margin-left: -60%;
+    font-size: 2vw;
+  }
+  body > main > #key > #top > section > .tt > p {
+    font-size: 9vw;
+  }
+  body > main > #key > #top > section > .t1 {
+    width: 150%;
+    font-size: 5vw;
+    padding: 4%;
+    margin-left: -60%;
+  }
+  body > main > #key > #top > section:nth-of-type(2) {
+    width: 90%;
+    margin-left: 0%;
+    height: 40vh;
+  }
+  body > main > #key > #top > section:nth-of-type(2) > P {
+    font-size: 4.5vw;
+  }
+  body > main > #key > #down > section {
+    width: 80%;
+    height: 8vh;
+  }
+  body > main > #key > #down > section > img {
+    scale: 0.15;
+  }
+  body > main > #key > #down > section > .i1 {
+    left: -12%;
+  }
+  body > main > #key > #down > section > .i2 {
+    left: -20%;
+  }
+  body > main > #key > #down > section > .i3 {
+    left: -43%;
+  }
+  body > main > #key > #down > section > .i4 {
+    scale: 0.19;
+    left: -18%;
+  }
+  body > main > #key > #down > section > p {
+    font-size: 4.5vw;
+    margin-left: 20vw;
+  }
+  body > main > #teacher {
+    top: 600%;
+  }
+  body > main > #teacher > h2 {
+    font-size: 10vw;
+  }
+  body > main > #teacher > div {
+    width: 90%;
+    flex-direction: column;
+  }
+  body > main > #teacher > div > p {
+    width: 100%;
+    font-size: 4.5vw;
+    margin-bottom: 10%;
+  }
+  body > main > #photos {
+    top: 620%;
+    perspective: 1000px;
+  }
+  body > main > #photos > * {
+    will-change: transform;
+    transition: 0.3s;
+  }
+  body > main > #photos > #pic1 {
+    width: 50%;
+    left: 20%;
+    top: 270%;
+    rotate: 2deg;
+  }
+  body > main > #photos > #pic1 > .font {
+    font-size: 4vw;
+  }
+  body > main > #photos > #pic1 > p {
+    font-size: 5vw;
+    margin-block: 10px;
+  }
+  body > main > #photos > #pic1 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.1s;
+  }
+  body > main > #photos > #pic2 {
+    width: 65%;
+    height: auto;
+    position: absolute;
+    left: 17%;
+    top: 170%;
+    rotate: -3deg;
+  }
+  body > main > #photos > #pic2 > .font {
+    font-size: 4vw;
+  }
+  body > main > #photos > #pic2 > p {
+    font-size: 5vw;
+    padding-block: 13px;
+  }
+  body > main > #photos > #pic2 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic3 {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    left: 52%;
+    top: 30%;
+    rotate: -4deg;
+  }
+  body > main > #photos > #pic3 > .font {
+    font-size: 4vw;
+  }
+  body > main > #photos > #pic3 > p {
+    font-size: 5vw;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic3 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic4 {
+    width: 55%;
+    height: auto;
+    position: absolute;
+    top: -20%;
+    left: 10%;
+    rotate: 2deg;
+  }
+  body > main > #photos > #pic4 > .font {
+    font-size: 4vw;
+  }
+  body > main > #photos > #pic4 > p {
+    font-size: 5vw;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic4 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic5 {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 220%;
+    rotate: -7deg;
+  }
+  body > main > #photos > #pic5 > .font {
+    font-size: 4vw;
+  }
+  body > main > #photos > #pic5 > p {
+    font-size: 5vw;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic5 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic6 {
+    width: 45%;
+    height: auto;
+    position: absolute;
+    top: 235%;
+    left: 27%;
+    rotate: 3deg;
+  }
+  body > main > #photos > #pic6 > .font {
+    font-size: 4vw;
+  }
+  body > main > #photos > #pic6 > p {
+    font-size: 5vw;
+    padding-block: 15px;
+  }
+  body > main > #photos > #pic6 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic7 {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    left: -30%;
+    top: -10%;
+    rotate: -6deg;
+  }
+  body > main > #photos > #pic7 > .font {
+    font-size: 4vw;
+  }
+  body > main > #photos > #pic7 > p {
+    font-size: 5vw;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic7 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #sun {
+    background-color: #F5F5EB;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 680%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  body > main > #sun > #Mentorship {
+    width: 85vw;
+    height: 160vh;
+    top: 70%;
+    border-radius: 0 0 600px 600px;
+    flex-direction: column;
+    position: fixed;
+  }
+  body > main > #sun > #Mentorship > #mentortitle {
+    width: 40%;
+    font-size: 10vw;
+    margin-left: 8%;
+    margin-top: -60%;
+  }
+  body > main > #sun > #Mentorship > ul {
+    width: 90%;
+    margin-left: 8%;
+  }
+  body > main > #sun > #Mentorship > ul > li {
+    width: 95%;
+  }
+  body > main > #sun > #Mentorship > ul > li > h4 {
+    font-size: 6vw;
+  }
+  body > main > #sun > #Mentorship > ul > li > div > section {
+    width: 60%;
+    font-size: 4vw;
+  }
+  body > main > #about {
+    top: 1140%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body > main > #about > #title-about {
+    width: 95%;
+    font-size: 10.5vw;
+    margin-bottom: 150%;
+    margin-left: 0;
+    text-align: center;
+  }
+  body > main > #about > #logos {
+    width: 90vw;
+  }
+  body > main > #about > #logos > #sec1 {
+    width: 25%;
+  }
+  body > main > #about > #logos > #sec1 > figure {
+    width: 30vw;
+    height: 30vw;
+  }
+  body > main > #about > #logos > #sec1 > figure:hover {
+    scale: 1.1;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(1) {
+    top: -15%;
+    left: 7%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(2) {
+    top: 0%;
+    left: 39%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(3) {
+    top: 20%;
+    left: -4%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(4) {
+    top: -20%;
+    left: 70%;
+  }
+  body > main > #about > #logos > #sec1 > figure > img {
+    width: 25vw;
+    height: auto;
+  }
+  body > main > #about > #logos > #tvsec {
+    margin-top: 30%;
+  }
+  body > main > #about > #logos > #tvsec > #tv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    transition: 1s;
+  }
+  body > main > #about > #logos > #sec2 {
+    width: 25%;
+  }
+  body > main > #about > #logos > #sec2 > figure {
+    width: 30vw;
+    height: 30vw;
+  }
+  body > main > #about > #logos > #sec2 > figure:hover {
+    scale: 1.1;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(1) {
+    top: 85%;
+    left: 70%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(2) {
+    top: 15%;
+    left: 70%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(3) {
+    top: 100%;
+    left: 40%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(4) {
+    top: 85%;
+    left: 0%;
+    width: 35vw;
+    height: 35vw;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(4) > img {
+    scale: 1.3;
+  }
+  body > main > #about > #logos > #sec2 > figure > img {
+    width: 22vw;
+    height: auto;
+  }
+  body > main #help {
+    height: 110vh;
+    top: 1270%;
+  }
+  body > main #help > img {
+    top: 7%;
+  }
+  body > main #help > section > .dayere {
+    width: 25vw;
+    height: 25vw;
+    margin-top: 25%;
+    padding: 8%;
+    font-size: 4vw;
+  }
+  body > main #help > section > .dayere:hover {
+    background-color: rgba(0, 0, 0, 0.7450980392);
+    color: #D2D3C3;
+  }
+  body > main #help > section > .dayere:nth-of-type(1) {
+    top: 40%;
+    left: 40%;
+  }
+  body > main #help > section > .dayere:nth-of-type(2) {
+    top: 40%;
+    left: -15%;
+  }
+  body > main #help > section > .dayere:nth-of-type(3) {
+    top: 0%;
+    left: 40%;
+  }
+  body > main #help > section > .dayere:nth-of-type(4) {
+    top: 15%;
+    left: 0%;
+  }
+  body > main #help > section > .dayere:nth-of-type(5) {
+    top: 20%;
+    left: 70%;
+  }
+  body > main #help > .contact {
+    width: 90%;
+    height: 30vh;
+    margin-bottom: 150px;
+  }
+  body > main #help > .contact > #kesho {
+    width: 40%;
+    height: 8vh;
+    font-size: 4vw;
+    margin-left: 4%;
+  }
+  body > main #help > .contact > #kesho > option {
+    background-color: #E0E1D1;
+  }
+  body > main #help > .contact > input {
+    width: 43%;
+    height: 8vh;
+    font-size: 4vw;
+  }
+  body > main #help > .contact > input::-moz-placeholder {
+    color: #1b1c1e;
+  }
+  body > main #help > .contact > input::placeholder {
+    color: #1b1c1e;
+  }
+  body > main #help > .contact > input:nth-of-type(3) {
+    width: 100%;
+  }
+  body > main #help > .contact > input:nth-of-type(2) {
+    width: 100%;
+  }
+  body > main > #footer {
+    width: 21vw;
+    height: 21vw;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    z-index: 99999;
+    left: 0;
+    margin: 3vw;
+    border-radius: 50%;
+    background-image: url(../img/ball-texture-copy.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body > main > #footer > img {
+    width: 18vw;
+    height: 18vw;
+    border-radius: 50%;
+  }
+  body > main > #footer > div {
+    position: absolute;
+  }
+}
+@media (min-width: 430px) {
+  body > main > div > .section {
+    height: 1500vh;
+    margin-inline: 8px;
+  }
+  body > main > div > .section:nth-of-type(6) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(7) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(8) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(9) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(10) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(11) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(12) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(13) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(14) {
+    display: none;
+  }
+  body > main > header {
+    height: 10vh;
+  }
+  body > main > header > button {
+    width: 12%;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 3%;
+  }
+  body > main > header > button > img {
+    scale: 0.8;
+    margin: 0%;
+  }
+  body > main > header > button > ul {
+    display: none;
+  }
+  body > main > header > #par {
+    flex-direction: row-reverse;
+  }
+  body > main > header > #par > button {
+    height: 6vh;
+    margin: 15px;
+    margin-inline: 0.1%;
+    margin-block: 5%;
+  }
+  body > main > header > #par > #b1 {
+    display: none;
+  }
+  body > main > header > #par > #b2 {
+    display: none;
+  }
+  body > main > header > #par > #b3 {
+    display: none;
+  }
+  body > main > header > #par > #b4 {
+    width: 30%;
+    font-size: 3vw;
+  }
+  body > main > header > #par > #shortmenu {
+    width: 12%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+    display: flex;
+  }
+  body > main > header > #par > #shortmenu > img {
+    width: 100%;
+    scale: 0.5;
+  }
+  body > main > #mid {
+    top: 50%;
+  }
+  body > main > #mid > #half {
+    width: 90%;
+    height: 50vw;
+  }
+  body > main > #mid > #half > p {
+    font-size: 6vw;
+    width: 70%;
+    margin-bottom: 5%;
+  }
+  body > main > #mid > p {
+    font-size: 13vw;
+  }
+  body > main > #mid > #first {
+    top: -10%;
+    left: 25%;
+  }
+  body > main > #mid > #last {
+    top: 3%;
+    left: 39%;
+  }
+  body > main > #mid > #img {
+    scale: 0.52;
+    top: -40%;
+  }
+  body > main > #paye {
+    height: 150vh;
+    top: 90%;
+    align-items: center;
+    flex-direction: column;
+  }
+  body > main > #paye > #circle1 {
+    transform: translateX(-30%);
+    scale: 0.7;
+  }
+  body > main > #paye > img {
+    scale: 0.45;
+    top: 145%;
+  }
+  body > main > #paye > video {
+    scale: 0.4;
+    top: 110%;
+  }
+  body > main > #paye > .parent {
+    width: 80%;
+    margin-top: 60%;
+  }
+  body > main > #paye > .parent > #txt1 {
+    width: 100%;
+    font-size: 8vw;
+    margin-top: 0%;
+    display: inline;
+  }
+  body > main > #paye > .parent > div {
+    width: 50%;
+    font-size: 4vw;
+    padding: 2px;
+  }
+  body > main > #paye > .txt {
+    width: 90%;
+    margin-top: 0%;
+  }
+  body > main > #paye > .txt > #p1, body > main > #paye > .txt #p2 {
+    font-size: 3vw;
+  }
+  body > main > #Portfolio {
+    top: 330%;
+  }
+  body > main > #Portfolio > p {
+    font-size: 30px;
+    top: -60%;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(1):hover > img {
+    scale: 0.4;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(2):hover > img {
+    scale: 0.35;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(3):hover > img {
+    scale: 0.4;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(4):hover > img {
+    scale: 0.45;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(5):hover > img {
+    scale: 0.4;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(6):hover > img {
+    scale: 0.4;
+  }
+  body > main > #Portfolio > ul > li > h4 {
+    font-size: 5vw;
+  }
+  body > main > #Portfolio > ul > li > p {
+    font-size: 2.5vw;
+  }
+  body > main > #Portfolio > ul > li > .ip1 {
+    top: -280%;
+    left: 0%;
+  }
+  body > main > #Portfolio > ul > li > .ip2 {
+    top: -280%;
+    left: -10%;
+  }
+  body > main > #Portfolio > ul > li > .ip3 {
+    top: -340%;
+    left: -140%;
+  }
+  body > main > #Portfolio > ul > li > .ip4 {
+    top: -295%;
+    left: -130%;
+  }
+  body > main > #Portfolio > ul > li > .ip5 {
+    top: -350%;
+    left: 0%;
+  }
+  body > main > #Portfolio > ul > li > .ip6 {
+    top: -320%;
+    left: -140%;
+  }
+  body > main > #key {
+    height: 150vh;
+    border-radius: 0px 0px 500px 500px;
+    padding-top: 30%;
+    top: 470%;
+  }
+  body > main > #key > #top {
+    width: 80%;
+    flex-direction: column;
+    margin-top: -10%;
+  }
+  body > main > #key > #top > section {
+    width: 100%;
+    margin: 0 5%;
+  }
+  body > main > #key > #top > section > .tt {
+    margin-left: 0%;
+    font-size: 1vw;
+  }
+  body > main > #key > #top > section > .tt > p {
+    font-size: 8vw;
+  }
+  body > main > #key > #top > section > .t1 {
+    width: 60%;
+    font-size: 4vw;
+    padding: 1%;
+    margin-left: -1%;
+  }
+  body > main > #key > #top > section:nth-of-type(2) {
+    width: 105%;
+    margin-left: 9%;
+  }
+  body > main > #key > #top > section:nth-of-type(2) > P {
+    font-size: 3vw;
+  }
+  body > main > #key > #down {
+    margin-bottom: 30%;
+  }
+  body > main > #key > #down > section {
+    width: 75%;
+    height: 10vh;
+  }
+  body > main > #key > #down > section > img {
+    scale: 0.2;
+  }
+  body > main > #key > #down > section > .i1 {
+    left: -2%;
+  }
+  body > main > #key > #down > section > .i2 {
+    left: -8%;
+  }
+  body > main > #key > #down > section > .i3 {
+    left: -17vw;
+  }
+  body > main > #key > #down > section > .i4 {
+    scale: 0.29;
+    left: -8%;
+  }
+  body > main > #key > #down > section > p {
+    font-size: 3.5vw;
+    margin-left: 110px;
+  }
+  body > main > #teacher {
+    top: 660%;
+  }
+  body > main > #teacher > h2 {
+    font-size: 55px;
+  }
+  body > main > #teacher > div {
+    width: 90%;
+    flex-direction: column;
+  }
+  body > main > #teacher > div > p {
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 2%;
+  }
+  body > main > #photos {
+    top: 650%;
+    perspective: 1000px;
+  }
+  body > main > #photos > * {
+    will-change: transform;
+    transition: 0.3s;
+  }
+  body > main > #photos > #pic1 {
+    width: 50%;
+    left: 35%;
+    top: 290%;
+    rotate: 2deg;
+  }
+  body > main > #photos > #pic1 > .font {
+    font-size: 16px;
+  }
+  body > main > #photos > #pic1 > p {
+    font-size: 22px;
+    margin-block: 10px;
+  }
+  body > main > #photos > #pic1 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.1s;
+  }
+  body > main > #photos > #pic2 {
+    width: 55%;
+    height: auto;
+    position: absolute;
+    left: 15%;
+    top: 185%;
+    rotate: -3deg;
+  }
+  body > main > #photos > #pic2 > .font {
+    font-size: 18px;
+  }
+  body > main > #photos > #pic2 > p {
+    font-size: 22px;
+    padding-block: 13px;
+  }
+  body > main > #photos > #pic2 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic3 {
+    width: 35%;
+    height: auto;
+    position: absolute;
+    left: 65%;
+    top: 40%;
+    rotate: -4deg;
+  }
+  body > main > #photos > #pic3 > .font {
+    font-size: 18px;
+  }
+  body > main > #photos > #pic3 > p {
+    font-size: 22px;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic3 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic4 {
+    width: 45%;
+    height: auto;
+    position: absolute;
+    top: -15%;
+    left: 10%;
+    rotate: 2deg;
+  }
+  body > main > #photos > #pic4 > .font {
+    font-size: 18px;
+  }
+  body > main > #photos > #pic4 > p {
+    font-size: 22px;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic4 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic5 {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 220%;
+    rotate: -7deg;
+  }
+  body > main > #photos > #pic5 > .font {
+    font-size: 18px;
+  }
+  body > main > #photos > #pic5 > p {
+    font-size: 22px;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic5 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic6 {
+    width: 35%;
+    height: auto;
+    position: absolute;
+    top: 230%;
+    left: 50%;
+    rotate: 3deg;
+  }
+  body > main > #photos > #pic6 > .font {
+    font-size: 18px;
+  }
+  body > main > #photos > #pic6 > p {
+    font-size: 22px;
+    padding-block: 15px;
+  }
+  body > main > #photos > #pic6 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic7 {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    left: -30%;
+    top: -10%;
+    rotate: -6deg;
+  }
+  body > main > #photos > #pic7 > .font {
+    font-size: 18px;
+  }
+  body > main > #photos > #pic7 > p {
+    font-size: 22px;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic7 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #sun {
+    background-color: #F5F5EB;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 700%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  body > main > #sun > #Mentorship {
+    width: 85vw;
+    height: 180vh;
+    top: 62%;
+    border-radius: 0 0 600px 600px;
+    flex-direction: column;
+    transition: 0.5s;
+    position: fixed;
+  }
+  body > main > #sun > #Mentorship > #mentortitle {
+    width: 40%;
+    font-size: 7vw;
+    margin-left: 8%;
+    margin-top: -40%;
+    margin-bottom: 10%;
+  }
+  body > main > #sun > #Mentorship > ul {
+    width: 90%;
+    margin-left: 8%;
+  }
+  body > main > #sun > #Mentorship > ul > li {
+    width: 95%;
+  }
+  body > main > #sun > #Mentorship > ul > li > h4 {
+    font-size: 4vw;
+  }
+  body > main > #sun > #Mentorship > ul > li > div > section {
+    width: 55%;
+    height: 6vh;
+    font-size: 3vw;
+  }
+  body > main > #sun > #Mentorship > ul > li > div > button {
+    height: 6vh;
+    font-size: 3vw;
+  }
+  body > main > #about {
+    top: 1220%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body > main > #about > #title-about {
+    width: 80%;
+    font-size: 47px;
+    margin-left: 3px;
+    margin-bottom: 120%;
+  }
+  body > main > #about > #logos {
+    width: 90vw;
+  }
+  body > main > #about > #logos > #sec1 {
+    width: 25%;
+  }
+  body > main > #about > #logos > #sec1 > figure {
+    width: 120px;
+    height: 120px;
+  }
+  body > main > #about > #logos > #sec1 > figure:hover {
+    scale: 1.1;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(1) {
+    top: -15%;
+    left: 5%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(2) {
+    top: 0%;
+    left: 35%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(3) {
+    top: 20%;
+    left: -7%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(4) {
+    top: -20%;
+    left: 70%;
+  }
+  body > main > #about > #logos > #sec1 > figure > img {
+    width: 110px;
+    height: auto;
+  }
+  body > main > #about > #logos > #tvsec {
+    margin-top: 30%;
+  }
+  body > main > #about > #logos > #tvsec > #tv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    transition: 1s;
+  }
+  body > main > #about > #logos > #sec2 {
+    width: 25%;
+  }
+  body > main > #about > #logos > #sec2 > figure {
+    width: 120px;
+    height: 120px;
+  }
+  body > main > #about > #logos > #sec2 > figure:hover {
+    scale: 1.1;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(1) {
+    top: 85%;
+    left: 70%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(2) {
+    top: 15%;
+    left: 75%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(3) {
+    top: 100%;
+    left: 35%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(4) {
+    top: 85%;
+    left: 5%;
+    width: 140px;
+    height: 140px;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(4) > img {
+    scale: 1.2;
+  }
+  body > main > #about > #logos > #sec2 > figure > img {
+    width: 90px;
+    height: auto;
+  }
+  body > main #help {
+    height: 120vh;
+    top: 1370%;
+  }
+  body > main #help > img {
+    top: 10%;
+  }
+  body > main #help > section > .dayere {
+    width: 120px;
+    height: 120px;
+    margin-top: 25%;
+    padding: 8%;
+    font-size: 22px;
+  }
+  body > main #help > section > .dayere:hover {
+    background-color: rgba(0, 0, 0, 0.7450980392);
+    color: #D2D3C3;
+  }
+  body > main #help > section > .dayere:nth-of-type(1) {
+    top: 40%;
+    left: 40%;
+  }
+  body > main #help > section > .dayere:nth-of-type(2) {
+    top: 40%;
+    left: -15%;
+  }
+  body > main #help > section > .dayere:nth-of-type(3) {
+    top: 0%;
+    left: 40%;
+  }
+  body > main #help > section > .dayere:nth-of-type(4) {
+    top: 15%;
+    left: 0%;
+  }
+  body > main #help > section > .dayere:nth-of-type(5) {
+    top: 20%;
+    left: 70%;
+  }
+  body > main #help > .contact {
+    width: 90%;
+    height: 30vh;
+    margin-bottom: 50px;
+  }
+  body > main #help > .contact > #kesho {
+    width: 45%;
+    height: 8vh;
+    font-size: 18px;
+    margin-left: 4%;
+  }
+  body > main #help > .contact > #kesho > option {
+    background-color: #E0E1D1;
+  }
+  body > main #help > .contact > input {
+    width: 43%;
+    height: 8vh;
+    font-size: 20px;
+  }
+  body > main #help > .contact > input::-moz-placeholder {
+    color: #1b1c1e;
+  }
+  body > main #help > .contact > input::placeholder {
+    color: #1b1c1e;
+  }
+  body > main #help > .contact > input:nth-of-type(3) {
+    width: 100%;
+  }
+  body > main #help > .contact > input:nth-of-type(2) {
+    width: 100%;
+  }
+}
+@media (min-width: 600px) {
+  body > main > div > .section {
+    height: 1470vh;
+    margin-inline: 12px;
+  }
+  body > main > div > .section:nth-of-type(6) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(7) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(8) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(9) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(10) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(11) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(12) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(13) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(14) {
+    display: none;
+  }
+  body > main > header {
+    height: 10vh;
+  }
+  body > main > header > button {
+    width: 12%;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 5%;
+  }
+  body > main > header > button > img {
+    scale: 1.2;
+    margin: 0%;
+  }
+  body > main > header > button > ul {
+    display: none;
+  }
+  body > main > header > #par {
+    flex-direction: row-reverse;
+  }
+  body > main > header > #par > button {
+    height: 8vh;
+    margin: 15px;
+    margin-inline: 0.1%;
+    margin-block: 5%;
+  }
+  body > main > header > #par > #b1 {
+    display: none;
+  }
+  body > main > header > #par > #b2 {
+    display: none;
+  }
+  body > main > header > #par > #b3 {
+    display: none;
+  }
+  body > main > header > #par > #b4 {
+    width: 30%;
+    font-size: 23px;
+  }
+  body > main > header > #par > #shortmenu {
+    width: 12%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+    display: flex;
+  }
+  body > main > header > #par > #shortmenu > img {
+    width: 100%;
+    scale: 0.65;
+  }
+  body > main > #mid {
+    top: 50%;
+  }
+  body > main > #mid > #half {
+    width: 90%;
+    height: 50vw;
+  }
+  body > main > #mid > #half > p {
+    font-size: 45px;
+    width: 70%;
+    margin-bottom: 5%;
+  }
+  body > main > #mid > p {
+    font-size: 100px;
+  }
+  body > main > #mid > #first {
+    top: -21%;
+    left: 20%;
+  }
+  body > main > #mid > #last {
+    top: -6%;
+    left: 35%;
+  }
+  body > main > #mid > #img {
+    scale: 0.57;
+    top: -40%;
+  }
+  body > main > #paye {
+    height: 150vh;
+    top: 90%;
+    align-items: center;
+    flex-direction: column;
+  }
+  body > main > #paye > #circle1 {
+    transform: translateX(-30%);
+    scale: 0.7;
+  }
+  body > main > #paye > img {
+    scale: 0.5;
+    top: 145%;
+  }
+  body > main > #paye > video {
+    top: 110%;
+  }
+  body > main > #paye > .parent {
+    width: 80%;
+    margin-top: 60%;
+  }
+  body > main > #paye > .parent > #txt1 {
+    width: 100%;
+    font-size: 7vw;
+    margin-top: -90%;
+  }
+  body > main > #paye > .parent > div {
+    width: 60%;
+    font-size: 3vw;
+    padding: 2px;
+  }
+  body > main > #paye > .txt {
+    width: 80%;
+    margin-top: -10%;
+  }
+  body > main > #paye > .txt > #p1, body > main > #paye > .txt #p2 {
+    font-size: 3vw;
+  }
+  body > main > #Portfolio {
+    top: 300%;
+  }
+  body > main > #Portfolio > p {
+    font-size: 7vw;
+    scale: 1.4;
+    top: -55%;
+  }
+  body > main > #Portfolio > ul > li {
+    width: 40%;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(1):hover > img {
+    scale: 0.6;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(2):hover > img {
+    scale: 0.7;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(3):hover > img {
+    scale: 0.6;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(4):hover > img {
+    scale: 0.8;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(5):hover > img {
+    scale: 0.7;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(6):hover > img {
+    scale: 0.7;
+  }
+  body > main > #Portfolio > ul > li > h4 {
+    font-size: 42px;
+  }
+  body > main > #Portfolio > ul > li > p {
+    font-size: 18px;
+  }
+  body > main > #Portfolio > ul > li > .ip1 {
+    top: -150%;
+    left: 30%;
+  }
+  body > main > #Portfolio > ul > li > .ip2 {
+    top: -180%;
+    left: -125%;
+  }
+  body > main > #Portfolio > ul > li > .ip3 {
+    top: -180%;
+    left: -105%;
+  }
+  body > main > #Portfolio > ul > li > .ip4 {
+    top: -170%;
+    left: 20%;
+  }
+  body > main > #Portfolio > ul > li > .ip5 {
+    top: -170%;
+    right: 40%;
+  }
+  body > main > #Portfolio > ul > li > .ip6 {
+    top: -70%;
+    left: -100%;
+  }
+  body > main > #key {
+    height: 150vh;
+    border-radius: 0px 0px 500px 500px;
+    padding-top: 40%;
+    top: 470%;
+  }
+  body > main > #key > #top {
+    width: 90%;
+    flex-direction: column;
+    margin-top: -25%;
+  }
+  body > main > #key > #top > section {
+    margin: 0 5%;
+  }
+  body > main > #key > #top > section > .tt {
+    width: 100%;
+    margin-left: 5%;
+    font-size: 80px;
+    text-align: start;
+  }
+  body > main > #key > #top > section > .tt > p {
+    font-size: 7.5vw;
+  }
+  body > main > #key > #top > section > .t1 {
+    width: 50%;
+    font-size: 4vw;
+    padding: 1%;
+    margin-left: 5%;
+  }
+  body > main > #key > #top > section:nth-of-type(2) {
+    width: 95%;
+    margin-left: 9%;
+  }
+  body > main > #key > #top > section:nth-of-type(2) > P {
+    font-size: 3vw;
+  }
+  body > main > #key > #down {
+    width: 100%;
+    margin-top: 0%;
+  }
+  body > main > #key > #down > section {
+    width: 80%;
+    height: 10vh;
+  }
+  body > main > #key > #down > section > img {
+    scale: 0.22;
+  }
+  body > main > #key > #down > section > .i1 {
+    left: -4%;
+  }
+  body > main > #key > #down > section > .i2 {
+    left: -8%;
+  }
+  body > main > #key > #down > section > .i3 {
+    left: -20%;
+  }
+  body > main > #key > #down > section > .i4 {
+    scale: 0.29;
+    left: -8%;
+  }
+  body > main > #key > #down > section > p {
+    font-size: 27px;
+    margin-left: 130px;
+  }
+  body > main > #teacher {
+    top: 660%;
+  }
+  body > main > #teacher > h2 {
+    font-size: 65px;
+  }
+  body > main > #teacher > div {
+    width: 90%;
+    flex-direction: column;
+  }
+  body > main > #teacher > div > p {
+    width: 100%;
+    font-size: 23px;
+    margin-bottom: 2%;
+  }
+  body > main > #photos {
+    top: 650%;
+    perspective: 1000px;
+  }
+  body > main > #photos > * {
+    will-change: transform;
+    transition: 0.3s;
+  }
+  body > main > #photos > #pic1 {
+    width: 50%;
+    left: 20%;
+    top: 330%;
+    rotate: -2deg;
+  }
+  body > main > #photos > #pic1 > .font {
+    font-size: 23px;
+  }
+  body > main > #photos > #pic1 > p {
+    font-size: 25px;
+    margin-block: 10px;
+  }
+  body > main > #photos > #pic1 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.1s;
+  }
+  body > main > #photos > #pic2 {
+    width: 55%;
+    height: auto;
+    position: absolute;
+    left: 27%;
+    top: 165%;
+    rotate: 4deg;
+  }
+  body > main > #photos > #pic2 > .font {
+    font-size: 23px;
+  }
+  body > main > #photos > #pic2 > p {
+    font-size: 25px;
+    padding-block: 13px;
+  }
+  body > main > #photos > #pic2 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic3 {
+    width: 35%;
+    height: auto;
+    position: absolute;
+    left: 65%;
+    top: 30%;
+    rotate: -4deg;
+  }
+  body > main > #photos > #pic3 > .font {
+    font-size: 23px;
+  }
+  body > main > #photos > #pic3 > p {
+    font-size: 25px;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic3 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic4 {
+    width: 45%;
+    height: auto;
+    position: absolute;
+    top: -20%;
+    left: 10%;
+    rotate: 2deg;
+  }
+  body > main > #photos > #pic4 > .font {
+    font-size: 23px;
+  }
+  body > main > #photos > #pic4 > p {
+    font-size: 25px;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic4 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic5 {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    left: 45%;
+    top: 230%;
+    rotate: -8deg;
+  }
+  body > main > #photos > #pic5 > .font {
+    font-size: 23px;
+  }
+  body > main > #photos > #pic5 > p {
+    font-size: 25px;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic5 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic6 {
+    width: 35%;
+    height: auto;
+    position: absolute;
+    top: 250%;
+    left: 40%;
+    rotate: 3deg;
+  }
+  body > main > #photos > #pic6 > .font {
+    font-size: 23px;
+  }
+  body > main > #photos > #pic6 > p {
+    font-size: 25px;
+    padding-block: 15px;
+  }
+  body > main > #photos > #pic6 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic7 {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    left: -30%;
+    top: -10%;
+    rotate: -6deg;
+  }
+  body > main > #photos > #pic7 > .font {
+    font-size: 23px;
+  }
+  body > main > #photos > #pic7 > p {
+    font-size: 25px;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic7 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #sun {
+    background-color: #F5F5EB;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 700%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  body > main > #sun > #Mentorship {
+    width: 85vw;
+    height: 170vh;
+    top: 80%;
+    border-radius: 0 0 600px 600px;
+    flex-direction: column;
+    transition: 0.5s;
+    position: fixed;
+  }
+  body > main > #sun > #Mentorship > #mentortitle {
+    width: 45%;
+    font-size: 6vw;
+    margin-left: 5%;
+    margin-top: -30%;
+  }
+  body > main > #sun > #Mentorship > ul {
+    width: 85%;
+    margin-left: 8%;
+  }
+  body > main > #sun > #Mentorship > ul > li {
+    width: 95%;
+  }
+  body > main > #sun > #Mentorship > ul > li > h4 {
+    font-size: 30px;
+  }
+  body > main > #sun > #Mentorship > ul > li > div > section {
+    width: 55%;
+  }
+  body > main > #about {
+    top: 1200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body > main > #about > #title-about {
+    width: 70%;
+    font-size: 60px;
+    margin-bottom: 130%;
+    margin-left: -10%;
+  }
+  body > main > #about > #logos {
+    width: 90vw;
+  }
+  body > main > #about > #logos > #sec1 {
+    width: 25%;
+  }
+  body > main > #about > #logos > #sec1 > figure {
+    width: 170px;
+    height: 170px;
+  }
+  body > main > #about > #logos > #sec1 > figure:hover {
+    scale: 1.1;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(1) {
+    top: -15%;
+    left: 5%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(2) {
+    top: -5%;
+    left: 35%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(3) {
+    top: 20%;
+    left: -5%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(4) {
+    top: -18%;
+    left: 65%;
+  }
+  body > main > #about > #logos > #sec1 > figure > img {
+    width: 110px;
+    height: auto;
+  }
+  body > main > #about > #logos > #tvsec {
+    margin-top: 20%;
+  }
+  body > main > #about > #logos > #tvsec > #tv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    transition: 1s;
+  }
+  body > main > #about > #logos > #sec2 {
+    width: 25%;
+  }
+  body > main > #about > #logos > #sec2 > figure {
+    width: 170px;
+    height: 170px;
+  }
+  body > main > #about > #logos > #sec2 > figure:hover {
+    scale: 1.1;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(1) {
+    top: 70%;
+    left: 75%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(2) {
+    top: 15%;
+    left: 75%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(3) {
+    top: 90%;
+    left: 55%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(4) {
+    top: 75%;
+    left: 5%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(4) > img {
+    scale: 1.2;
+  }
+  body > main > #about > #logos > #sec2 > figure > img {
+    width: 110px;
+    height: auto;
+  }
+  body > main #help {
+    height: 115vh;
+    top: 1350%;
+  }
+  body > main #help > img {
+    top: 12%;
+  }
+  body > main #help > section > .dayere {
+    width: 140px;
+    height: 140px;
+    margin-top: 30%;
+    padding: 8%;
+    font-size: 22px;
+  }
+  body > main #help > section > .dayere:hover {
+    background-color: rgba(0, 0, 0, 0.7450980392);
+    color: #D2D3C3;
+  }
+  body > main #help > section > .dayere:nth-of-type(1) {
+    top: 40%;
+    left: 40%;
+  }
+  body > main #help > section > .dayere:nth-of-type(2) {
+    top: 40%;
+    left: -15%;
+  }
+  body > main #help > section > .dayere:nth-of-type(3) {
+    top: 0%;
+    left: 40%;
+  }
+  body > main #help > section > .dayere:nth-of-type(4) {
+    top: 15%;
+    left: 0%;
+  }
+  body > main #help > section > .dayere:nth-of-type(5) {
+    top: 20%;
+    left: 70%;
+  }
+  body > main #help > .contact {
+    width: 90%;
+    height: 30vh;
+    margin-bottom: 150px;
+  }
+  body > main #help > .contact > #kesho {
+    width: 47%;
+    height: 8vh;
+    font-size: 18px;
+    margin-left: 2%;
+  }
+  body > main #help > .contact > #kesho > option {
+    background-color: #E0E1D1;
+  }
+  body > main #help > .contact > input {
+    width: 44%;
+    height: 8vh;
+    font-size: 20px;
+  }
+  body > main #help > .contact > input::-moz-placeholder {
+    color: #1b1c1e;
+  }
+  body > main #help > .contact > input::placeholder {
+    color: #1b1c1e;
+  }
+  body > main #help > .contact > input:nth-of-type(3) {
+    width: 100%;
+  }
+  body > main #help > .contact > input:nth-of-type(2) {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  body > main > div > .section {
+    height: 1700vh;
+    margin-inline: 15px;
+  }
+  body > main > div > .section:nth-of-type(6) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(7) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(8) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(9) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(10) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(11) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(12) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(13) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(14) {
+    display: none;
+  }
+  body > main > header {
+    height: 10vh;
+  }
+  body > main > header > button {
+    width: 40%;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 3%;
+  }
+  body > main > header > button > img {
+    scale: 0.9;
+    margin: 0%;
+  }
+  body > main > header > button > ul {
+    position: relative;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-left: 1%;
+    width: 100%;
+  }
+  body > main > header > button > ul > li {
+    width: 100%;
+    list-style-type: none;
+    font-size: 2.5vw;
+    font-family: "satoshi";
+    position: absolute;
+    opacity: 0;
+  }
+  body > main > header > #par {
+    flex-direction: row-reverse;
+  }
+  body > main > header > #par > button {
+    height: 8vh;
+    margin: 15px;
+    margin-inline: 0.1%;
+    margin-block: 5%;
+  }
+  body > main > header > #par > #b1 {
+    display: none;
+  }
+  body > main > header > #par > #b2 {
+    display: none;
+  }
+  body > main > header > #par > #b3 {
+    display: none;
+  }
+  body > main > header > #par > #b4 {
+    width: 30%;
+    font-size: 3vw;
+  }
+  body > main > header > #par > #shortmenu {
+    width: 12%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+    display: flex;
+  }
+  body > main > header > #par > #shortmenu > img {
+    width: 100%;
+    scale: 0.65;
+  }
+  body > main > #mid {
+    top: 50%;
+  }
+  body > main > #mid > #half {
+    width: 90%;
+    height: 50vw;
+  }
+  body > main > #mid > #half > p {
+    font-size: 6vw;
+    width: 70%;
+    margin-bottom: 15%;
+  }
+  body > main > #mid > p {
+    font-size: 15vw;
+  }
+  body > main > #mid > #first {
+    top: -18%;
+    left: 20%;
+  }
+  body > main > #mid > #last {
+    top: -2%;
+    left: 37%;
+  }
+  body > main > #mid > #img {
+    scale: 0.5;
+    top: -40%;
+  }
+  body > main > #paye {
+    height: 180vh;
+    top: 120%;
+    align-items: center;
+    flex-direction: column;
+  }
+  body > main > #paye > #circle1 {
+    transform: translateX(-30%);
+    scale: 0.7;
+    display: none;
+  }
+  body > main > #paye > img {
+    scale: 0.5;
+    top: 135%;
+  }
+  body > main > #paye > video {
+    top: 100%;
+  }
+  body > main > #paye > .parent {
+    width: 80%;
+    margin-top: 20%;
+  }
+  body > main > #paye > .parent > #txt1 {
+    width: 100%;
+    font-size: 8vw;
+    margin-top: 0%;
+  }
+  body > main > #paye > .parent > div {
+    width: 60%;
+    font-size: 4vw;
+    padding: 2px;
+  }
+  body > main > #paye > .txt {
+    width: 80%;
+    margin-top: -50%;
+  }
+  body > main > #paye > .txt > #p1, body > main > #paye > .txt #p2 {
+    font-size: 3vw;
+  }
+  body > main > #Portfolio {
+    top: 370%;
+  }
+  body > main > #Portfolio > p {
+    font-size: 50px;
+    scale: 1.4;
+    top: -55%;
+  }
+  body > main > #Portfolio > ul > li {
+    width: 40%;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(1):hover > img {
+    scale: 0.6;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(2):hover > img {
+    scale: 0.7;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(3):hover > img {
+    scale: 0.6;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(4):hover > img {
+    scale: 0.8;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(5):hover > img {
+    scale: 0.7;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(6):hover > img {
+    scale: 0.7;
+  }
+  body > main > #Portfolio > ul > li > h4 {
+    font-size: 6vw;
+  }
+  body > main > #Portfolio > ul > li > p {
+    font-size: 2.8vw;
+  }
+  body > main > #Portfolio > ul > li > .ip1 {
+    top: -150%;
+    left: 30%;
+  }
+  body > main > #Portfolio > ul > li > .ip2 {
+    top: -180%;
+    left: -125%;
+  }
+  body > main > #Portfolio > ul > li > .ip3 {
+    top: -180%;
+    left: -105%;
+  }
+  body > main > #Portfolio > ul > li > .ip4 {
+    top: -170%;
+    left: 20%;
+  }
+  body > main > #Portfolio > ul > li > .ip5 {
+    top: -170%;
+    left: 42%;
+  }
+  body > main > #Portfolio > ul > li > .ip6 {
+    top: -70%;
+    right: -120%;
+  }
+  body > main > #key {
+    height: 160vh;
+    border-radius: 0px 0px 500px 500px;
+    padding-top: 25%;
+    top: 550%;
+  }
+  body > main > #key > #top {
+    width: 90%;
+    flex-direction: column;
+    margin-top: -10%;
+    padding-top: 0%;
+  }
+  body > main > #key > #top > section {
+    margin: 0 5%;
+  }
+  body > main > #key > #top > section > .tt {
+    width: 100%;
+    margin-left: 4%;
+    font-size: 7vw;
+    text-align: start;
+  }
+  body > main > #key > #top > section > .tt > p {
+    font-size: 6vw;
+  }
+  body > main > #key > #top > section > .t1 {
+    width: 50%;
+    font-size: 3vw;
+    padding: 1%;
+    margin-left: 4%;
+  }
+  body > main > #key > #top > section:nth-of-type(2) {
+    width: 95%;
+    margin-left: 9%;
+    margin-top: 0%;
+  }
+  body > main > #key > #top > section:nth-of-type(2) > P {
+    font-size: 27px;
+  }
+  body > main > #key > #down {
+    width: 100%;
+    margin-top: 4%;
+  }
+  body > main > #key > #down > section {
+    width: 75%;
+    height: 11vh;
+  }
+  body > main > #key > #down > section > img {
+    scale: 0.22;
+  }
+  body > main > #key > #down > section > .i1 {
+    left: -2%;
+  }
+  body > main > #key > #down > section > .i2 {
+    left: -5%;
+  }
+  body > main > #key > #down > section > .i3 {
+    left: -15%;
+  }
+  body > main > #key > #down > section > .i4 {
+    scale: 0.29;
+    left: -5%;
+  }
+  body > main > #key > #down > section > p {
+    font-size: 30px;
+    margin-left: 130px;
+  }
+  body > main > #teacher {
+    top: 740%;
+  }
+  body > main > #teacher > h2 {
+    font-size: 65px;
+  }
+  body > main > #teacher > div {
+    width: 90%;
+    flex-direction: column;
+  }
+  body > main > #teacher > div > p {
+    width: 100%;
+    font-size: 23px;
+    margin-bottom: 2%;
+  }
+  body > main > #photos {
+    top: 770%;
+    perspective: 1000px;
+  }
+  body > main > #photos > * {
+    will-change: transform;
+    transition: 0.3s;
+  }
+  body > main > #photos > #pic1 {
+    width: 50%;
+    left: 30%;
+    top: 320%;
+    rotate: 2deg;
+  }
+  body > main > #photos > #pic1 > .font {
+    font-size: 23px;
+  }
+  body > main > #photos > #pic1 > p {
+    font-size: 25px;
+    margin-block: 10px;
+  }
+  body > main > #photos > #pic1 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.1s;
+  }
+  body > main > #photos > #pic2 {
+    width: 55%;
+    height: auto;
+    position: absolute;
+    left: 5%;
+    top: 145%;
+    rotate: -3deg;
+  }
+  body > main > #photos > #pic2 > .font {
+    font-size: 23px;
+  }
+  body > main > #photos > #pic2 > p {
+    font-size: 25px;
+    padding-block: 13px;
+  }
+  body > main > #photos > #pic2 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic3 {
+    width: 35%;
+    height: auto;
+    position: absolute;
+    left: 65%;
+    top: 30%;
+    rotate: -4deg;
+  }
+  body > main > #photos > #pic3 > .font {
+    font-size: 23px;
+  }
+  body > main > #photos > #pic3 > p {
+    font-size: 25px;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic3 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic4 {
+    width: 45%;
+    height: auto;
+    position: absolute;
+    top: -35%;
+    left: 10%;
+    rotate: 2deg;
+  }
+  body > main > #photos > #pic4 > .font {
+    font-size: 23px;
+  }
+  body > main > #photos > #pic4 > p {
+    font-size: 25px;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic4 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic5 {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 240%;
+    rotate: -7deg;
+  }
+  body > main > #photos > #pic5 > .font {
+    font-size: 23px;
+  }
+  body > main > #photos > #pic5 > p {
+    font-size: 25px;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic5 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic6 {
+    width: 35%;
+    height: auto;
+    position: absolute;
+    top: 250%;
+    left: 27%;
+    rotate: 6deg;
+  }
+  body > main > #photos > #pic6 > .font {
+    font-size: 23px;
+  }
+  body > main > #photos > #pic6 > p {
+    font-size: 25px;
+    padding-block: 15px;
+  }
+  body > main > #photos > #pic6 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic7 {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    left: -25%;
+    top: 15%;
+    rotate: -6deg;
+  }
+  body > main > #photos > #pic7 > .font {
+    font-size: 23px;
+  }
+  body > main > #photos > #pic7 > p {
+    font-size: 25px;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic7 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #sun {
+    background-color: #F5F5EB;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 820%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  body > main > #sun > #Mentorship {
+    width: 85vw;
+    height: 200vh;
+    top: 90%;
+    border-radius: 0 0 600px 600px;
+    flex-direction: column;
+    transition: 0s;
+    position: fixed;
+  }
+  body > main > #sun > #Mentorship > #mentortitle {
+    width: 45%;
+    font-size: 6vw;
+    margin-left: 8%;
+    margin-top: -15%;
+  }
+  body > main > #sun > #Mentorship > ul {
+    width: 75%;
+    margin-left: 10%;
+  }
+  body > main > #sun > #Mentorship > ul > li {
+    width: 95%;
+  }
+  body > main > #sun > #Mentorship > ul > li > h4 {
+    font-size: 35px;
+  }
+  body > main > #sun > #Mentorship > ul > li > div > section {
+    width: 55%;
+  }
+  body > main > #about {
+    top: 1350%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body > main > #about > #title-about {
+    width: 70%;
+    font-size: 70px;
+    margin-bottom: 130%;
+    margin-left: -10%;
+  }
+  body > main > #about > #logos {
+    width: 90vw;
+  }
+  body > main > #about > #logos > #sec1 {
+    width: 25%;
+  }
+  body > main > #about > #logos > #sec1 > figure {
+    width: 220px;
+    height: 220px;
+  }
+  body > main > #about > #logos > #sec1 > figure:hover {
+    scale: 1.3;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(1) {
+    top: -15%;
+    left: 5%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(2) {
+    top: -5%;
+    left: 35%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(3) {
+    top: 20%;
+    left: -5%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(4) {
+    top: -18%;
+    left: 65%;
+  }
+  body > main > #about > #logos > #sec1 > figure > img {
+    width: 180px;
+    height: auto;
+  }
+  body > main > #about > #logos > #tvsec {
+    margin-top: 20%;
+  }
+  body > main > #about > #logos > #tvsec > #tv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    transition: 1s;
+  }
+  body > main > #about > #logos > #sec2 {
+    width: 25%;
+  }
+  body > main > #about > #logos > #sec2 > figure {
+    width: 220px;
+    height: 220px;
+  }
+  body > main > #about > #logos > #sec2 > figure:hover {
+    scale: 1.3;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(1) {
+    top: 70%;
+    left: 75%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(2) {
+    top: 15%;
+    left: 75%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(3) {
+    top: 90%;
+    left: 55%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(4) {
+    top: 75%;
+    left: 5%;
+    width: 220px;
+    height: 220px;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(4) > img {
+    scale: 1.2;
+  }
+  body > main > #about > #logos > #sec2 > figure > img {
+    width: 170px;
+    height: auto;
+  }
+  body > main #help {
+    height: 145vh;
+    top: 1550%;
+  }
+  body > main #help > img {
+    top: 15%;
+  }
+  body > main #help > section > .dayere {
+    width: 160px;
+    height: 160px;
+    margin-top: 30%;
+    padding: 8%;
+    font-size: 22px;
+  }
+  body > main #help > section > .dayere:hover {
+    background-color: rgba(0, 0, 0, 0.7450980392);
+    color: #D2D3C3;
+  }
+  body > main #help > section > .dayere:nth-of-type(1) {
+    top: 40%;
+    left: 40%;
+  }
+  body > main #help > section > .dayere:nth-of-type(2) {
+    top: 40%;
+    left: -15%;
+  }
+  body > main #help > section > .dayere:nth-of-type(3) {
+    top: 0%;
+    left: 40%;
+  }
+  body > main #help > section > .dayere:nth-of-type(4) {
+    top: 15%;
+    left: 0%;
+  }
+  body > main #help > section > .dayere:nth-of-type(5) {
+    top: 20%;
+    left: 70%;
+  }
+  body > main #help > .contact {
+    width: 90%;
+    height: 30vh;
+    margin-bottom: 150px;
+  }
+  body > main #help > .contact > #kesho {
+    width: 47%;
+    height: 8vh;
+    font-size: 18px;
+    margin-left: 2%;
+  }
+  body > main #help > .contact > #kesho > option {
+    background-color: #E0E1D1;
+  }
+  body > main #help > .contact > input {
+    width: 44%;
+    height: 8vh;
+    font-size: 20px;
+  }
+  body > main #help > .contact > input::-moz-placeholder {
+    color: #1b1c1e;
+  }
+  body > main #help > .contact > input::placeholder {
+    color: #1b1c1e;
+  }
+  body > main #help > .contact > input:nth-of-type(3) {
+    width: 100%;
+  }
+  body > main #help > .contact > input:nth-of-type(2) {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  body > main > div > .section {
+    height: 1900vh;
+    margin-inline: 12px;
+  }
+  body > main > div > .section:nth-of-type(6) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(7) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(8) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(9) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(10) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(11) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(12) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(13) {
+    display: none;
+  }
+  body > main > div > .section:nth-of-type(14) {
+    display: none;
+  }
+  body > main > header {
+    height: 13vh;
+  }
+  body > main > header > button {
+    width: 18%;
+    height: 6vh;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    margin-top: 2%;
+  }
+  body > main > header > button > img {
+    scale: 0.8;
+    margin: 0%;
+  }
+  body > main > header > button > ul {
+    position: relative;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-left: 1%;
+    width: 100%;
+  }
+  body > main > header > button > ul > li {
+    width: 100%;
+    list-style-type: none;
+    font-size: 16px;
+    font-family: "satoshi";
+    position: absolute;
+    opacity: 0;
+  }
+  body > main > header > #par {
+    flex-direction: row;
+  }
+  body > main > header > #par > button {
+    width: 13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    margin: 14px;
+    margin-inline: 0.2%;
+    margin-block: 2.7%;
+    font-size: 1.5vw;
+  }
+  body > main > header > #par > #b1 {
+    display: flex;
+  }
+  body > main > header > #par > #b2 {
+    display: flex;
+  }
+  body > main > header > #par > #b3 {
+    display: flex;
+  }
+  body > main > header > #par > #b4 {
+    width: 11%;
+    font-size: 1.5vw;
+  }
+  body > main > header > #par > #shortmenu {
+    width: 12%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+    display: none;
+  }
+  body > main > header > #par > #shortmenu > img {
+    width: 100%;
+    scale: 0.65;
+  }
+  body > main > #mid {
+    top: 30%;
+  }
+  body > main > #mid > #half {
+    width: 90%;
+    height: 50vw;
+    scale: 0.95;
+  }
+  body > main > #mid > #half > p {
+    font-size: 5.5vw;
+    width: 65%;
+    margin-bottom: 15%;
+  }
+  body > main > #mid > p {
+    font-size: 11vw;
+  }
+  body > main > #mid > #first {
+    top: -3%;
+    left: 25%;
+  }
+  body > main > #mid > #last {
+    top: 9%;
+    left: 38.5%;
+  }
+  body > main > #mid > #img {
+    scale: 0.42;
+    top: -36%;
+  }
+  body > main > #paye {
+    height: 190vh;
+    top: 120%;
+    align-items: center;
+    flex-direction: column;
+  }
+  body > main > #paye > #circle1 {
+    transform: translateX(-30%);
+    scale: 0.7;
+    display: none;
+  }
+  body > main > #paye > img {
+    scale: 0.4;
+    top: 135%;
+  }
+  body > main > #paye > video {
+    top: 100%;
+    scale: 0.35;
+  }
+  body > main > #paye > .parent {
+    width: 70%;
+    margin-top: 60%;
+  }
+  body > main > #paye > .parent > #txt1 {
+    width: 100%;
+    font-size: 8vw;
+    margin-top: -30vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  body > main > #paye > .parent > div {
+    width: 55%;
+    font-size: 4vw;
+    padding: 7px;
+  }
+  body > main > #paye > .txt {
+    width: 70%;
+    margin-top: -15vh;
+  }
+  body > main > #paye > .txt > #p1, body > main > #paye > .txt #p2 {
+    font-size: 25px;
+  }
+  body > main > #Portfolio {
+    top: 400%;
+  }
+  body > main > #Portfolio > p {
+    font-size: 1vw;
+    scale: 1.4;
+    top: -55%;
+  }
+  body > main > #Portfolio > ul > li {
+    width: 40%;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(1):hover > img {
+    scale: 0.95;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(2):hover > img {
+    scale: 1;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(3):hover > img {
+    scale: 0.85;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(4):hover > img {
+    scale: 0.9;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(5):hover > img {
+    scale: 0.85;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(6):hover > img {
+    scale: 0.85;
+  }
+  body > main > #Portfolio > ul > li > h4 {
+    font-size: 45px;
+  }
+  body > main > #Portfolio > ul > li > p {
+    font-size: 22px;
+  }
+  body > main > #Portfolio > ul > li > .ip1 {
+    top: -200%;
+    left: 55%;
+  }
+  body > main > #Portfolio > ul > li > .ip2 {
+    top: -180%;
+    left: -80%;
+  }
+  body > main > #Portfolio > ul > li > .ip3 {
+    top: -180%;
+    left: -85%;
+  }
+  body > main > #Portfolio > ul > li > .ip4 {
+    top: -170%;
+    left: 50%;
+  }
+  body > main > #Portfolio > ul > li > .ip5 {
+    top: -170%;
+    right: 60%;
+  }
+  body > main > #Portfolio > ul > li > .ip6 {
+    top: -170%;
+    right: -80%;
+  }
+  body > main > #key {
+    height: 170vh;
+    border-radius: 0px 0px 600px 600px;
+    padding-top: 40%;
+    top: 620%;
+  }
+  body > main > #key > #top {
+    width: 100%;
+    flex-direction: column;
+    margin-top: -55vh;
+  }
+  body > main > #key > #top > section {
+    width: 85%;
+    margin: 0 0%;
+  }
+  body > main > #key > #top > section > .tt {
+    width: 100%;
+    margin-left: 0%;
+    font-size: 80px;
+    padding-left: 0vw;
+  }
+  body > main > #key > #top > section > .tt > p {
+    font-size: 60px;
+  }
+  body > main > #key > #top > section > .t1 {
+    width: 40%;
+    font-size: 32px;
+    padding: 1%;
+    margin-left: 0%;
+  }
+  body > main > #key > #top > section:nth-of-type(2) {
+    width: 85%;
+    margin-left: 0%;
+  }
+  body > main > #key > #top > section:nth-of-type(2) > P {
+    font-size: 27px;
+  }
+  body > main > #key > #down {
+    width: 100%;
+    margin-top: 0%;
+  }
+  body > main > #key > #down > section {
+    width: 37vw;
+    height: 12vh;
+    margin-inline: 1vw;
+  }
+  body > main > #key > #down > section > img {
+    scale: 0.25;
+  }
+  body > main > #key > #down > section > .i1 {
+    left: -1vw;
+  }
+  body > main > #key > #down > section > .i2 {
+    left: -3vw;
+  }
+  body > main > #key > #down > section > .i3 {
+    left: clamp(-90px, -9vw, 7px);
+  }
+  body > main > #key > #down > section > .i4 {
+    scale: 0.29;
+    left: -3vw;
+  }
+  body > main > #key > #down > section > p {
+    font-size: 2.5vw;
+    margin-left: 9vw;
+  }
+  body > main > #teacher {
+    top: 840%;
+  }
+  body > main > #teacher > h2 {
+    font-size: 7vw;
+  }
+  body > main > #teacher > div {
+    width: 90%;
+    flex-direction: row;
+  }
+  body > main > #teacher > div > p {
+    width: 45%;
+    font-size: 2.5vw;
+    margin-bottom: 2%;
+  }
+  body > main > #photos {
+    top: 840%;
+    perspective: 1000px;
+  }
+  body > main > #photos > * {
+    will-change: transform;
+    transition: 0.3s;
+  }
+  body > main > #photos > #pic1 {
+    width: 35vw;
+    left: 40%;
+    top: 350%;
+    rotate: 4deg;
+  }
+  body > main > #photos > #pic1 > .font {
+    font-size: 2.5vw;
+  }
+  body > main > #photos > #pic1 > p {
+    font-size: 3vw;
+    margin-block: 10px;
+  }
+  body > main > #photos > #pic1 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.1s;
+  }
+  body > main > #photos > #pic2 {
+    width: 40vw;
+    height: auto;
+    position: absolute;
+    left: 5%;
+    top: 180%;
+    rotate: -3deg;
+  }
+  body > main > #photos > #pic2 > .font {
+    font-size: 2.5vw;
+  }
+  body > main > #photos > #pic2 > p {
+    font-size: 3vw;
+    padding-block: 13px;
+  }
+  body > main > #photos > #pic2 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic3 {
+    width: 31vw;
+    height: auto;
+    position: absolute;
+    left: 60%;
+    top: 30%;
+    rotate: -4deg;
+  }
+  body > main > #photos > #pic3 > .font {
+    font-size: 2.5vw;
+  }
+  body > main > #photos > #pic3 > p {
+    font-size: 3vw;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic3 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic4 {
+    width: 40vw;
+    height: auto;
+    position: absolute;
+    top: -40%;
+    left: 5%;
+    rotate: 2deg;
+  }
+  body > main > #photos > #pic4 > .font {
+    font-size: 2.5vw;
+  }
+  body > main > #photos > #pic4 > p {
+    font-size: 3vw;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic4 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic5 {
+    width: 40vw;
+    height: auto;
+    position: absolute;
+    left: 20%;
+    top: 290%;
+    rotate: 2deg;
+  }
+  body > main > #photos > #pic5 > .font {
+    font-size: 2.5vw;
+  }
+  body > main > #photos > #pic5 > p {
+    font-size: 3vw;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic5 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic6 {
+    width: 35%;
+    height: auto;
+    position: absolute;
+    top: 280%;
+    left: 35%;
+    rotate: 6deg;
+  }
+  body > main > #photos > #pic6 > .font {
+    font-size: 2.5vw;
+  }
+  body > main > #photos > #pic6 > p {
+    font-size: 3vw;
+    padding-block: 15px;
+  }
+  body > main > #photos > #pic6 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic7 {
+    width: 35vw;
+    height: auto;
+    position: absolute;
+    left: -20%;
+    top: 25%;
+    rotate: -6deg;
+  }
+  body > main > #photos > #pic7 > .font {
+    font-size: 2.5vw;
+  }
+  body > main > #photos > #pic7 > p {
+    font-size: 3vw;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic7 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #sun {
+    background-color: #F5F5EB;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 930%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  body > main > #sun > #Mentorship {
+    width: 85vw;
+    height: 180vh;
+    top: 90%;
+    border-radius: 0 0 600px 600px;
+    flex-direction: row;
+    transition: 0s;
+    position: fixed;
+  }
+  body > main > #sun > #Mentorship > #mentortitle {
+    width: 35%;
+    font-size: 6vw;
+    margin-left: 4%;
+    margin-top: 0%;
+  }
+  body > main > #sun > #Mentorship > ul {
+    width: 45%;
+    margin-left: 0%;
+  }
+  body > main > #sun > #Mentorship > ul > li {
+    width: 100%;
+  }
+  body > main > #sun > #Mentorship > ul > li > h4 {
+    font-size: 3vw;
+  }
+  body > main > #sun > #Mentorship > ul > li > div > section {
+    width: 55%;
+    height: 6vh;
+    font-size: 2vw;
+  }
+  body > main > #sun > #Mentorship > ul > li > div > button {
+    height: 6vh;
+    font-size: 2vw;
+  }
+  body > main > #about {
+    top: 1520%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body > main > #about > #title-about {
+    width: 70%;
+    font-size: 6vw;
+    margin-bottom: 60%;
+    margin-left: -10%;
+  }
+  body > main > #about > #logos {
+    width: 90vw;
+  }
+  body > main > #about > #logos > #sec1 {
+    width: 25%;
+  }
+  body > main > #about > #logos > #sec1 > figure {
+    width: 17vw;
+    height: 17vw;
+  }
+  body > main > #about > #logos > #sec1 > figure:hover {
+    scale: 1.1;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(1) {
+    top: 42%;
+    left: 7%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(2) {
+    top: 10%;
+    left: 15%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(3) {
+    top: 15%;
+    left: -5%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(4) {
+    top: 20%;
+    left: 85%;
+  }
+  body > main > #about > #logos > #sec1 > figure > img {
+    width: 14vw;
+    height: auto;
+  }
+  body > main > #about > #logos > #tvsec {
+    margin-top: 15%;
+  }
+  body > main > #about > #logos > #tvsec > #tv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    transition: 1s;
+  }
+  body > main > #about > #logos > #sec2 {
+    width: 25%;
+  }
+  body > main > #about > #logos > #sec2 > figure {
+    width: 17vw;
+    height: 17vw;
+  }
+  body > main > #about > #logos > #sec2 > figure:hover {
+    scale: 1.1;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(1) {
+    top: 80%;
+    left: 85.5%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(2) {
+    top: 51%;
+    left: 75%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(3) {
+    top: 82%;
+    left: 65%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(4) {
+    top: 75%;
+    left: 12%;
+    width: 18vw;
+    height: 18vw;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(4) > img {
+    scale: 1.2;
+  }
+  body > main > #about > #logos > #sec2 > figure > img {
+    width: 12vw;
+    height: auto;
+  }
+  body > main #help {
+    height: 180vh;
+    top: 1700%;
+  }
+  body > main #help > img {
+    top: 15%;
+  }
+  body > main #help > section > .dayere {
+    width: 20vw;
+    height: 20vw;
+    margin-top: 20%;
+    padding: 6%;
+    font-size: 22px;
+  }
+  body > main #help > section > .dayere:hover {
+    background-color: rgba(0, 0, 0, 0.7450980392);
+    color: #D2D3C3;
+  }
+  body > main #help > section > .dayere:nth-of-type(1) {
+    top: 40%;
+    left: 40%;
+  }
+  body > main #help > section > .dayere:nth-of-type(2) {
+    top: 40%;
+    left: -15%;
+  }
+  body > main #help > section > .dayere:nth-of-type(3) {
+    top: 0%;
+    left: 40%;
+  }
+  body > main #help > section > .dayere:nth-of-type(4) {
+    top: 15%;
+    left: 0%;
+  }
+  body > main #help > section > .dayere:nth-of-type(5) {
+    top: 20%;
+    left: 70%;
+  }
+  body > main #help > .contact {
+    width: 90%;
+    height: 30vh;
+    margin-bottom: 15vh;
+    margin-top: 5vh;
+  }
+  body > main #help > .contact > #kesho {
+    width: 50%;
+    height: 8vh;
+    font-size: 18px;
+    margin-left: 2%;
+  }
+  body > main #help > .contact > #kesho > option {
+    background-color: #E0E1D1;
+  }
+  body > main #help > .contact > input {
+    width: 44%;
+    height: 8vh;
+    font-size: 20px;
+  }
+  body > main #help > .contact > input::-moz-placeholder {
+    color: #1b1c1e;
+  }
+  body > main #help > .contact > input::placeholder {
+    color: #1b1c1e;
+  }
+  body > main #help > .contact > input:nth-of-type(3) {
+    width: 100%;
+  }
+  body > main #help > .contact > input:nth-of-type(2) {
+    width: 100%;
+  }
+}
+@media (min-width: 1300px) {
+  body > main > div > .section {
+    height: 2450vh;
+    margin-inline: 12px;
+  }
+  body > main > div > .section:nth-of-type(6) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(7) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(8) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(9) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(10) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(11) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(12) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(13) {
+    display: flex;
+  }
+  body > main > div > .section:nth-of-type(14) {
+    display: flex;
+  }
+  body > main > header {
+    height: 10vh;
+    margin-top: -2%;
+  }
+  body > main > header > button {
+    width: 14%;
+    height: 7vh;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    margin-top: 3.5%;
+  }
+  body > main > header > button > img {
+    scale: 0.7;
+    margin: 0%;
+  }
+  body > main > header > button > ul {
+    position: relative;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-left: 1%;
+    width: 100%;
+  }
+  body > main > header > button > ul > li {
+    width: 100%;
+    list-style-type: none;
+    font-size: 16px;
+    font-family: "satoshi";
+    position: absolute;
+    opacity: 0;
+  }
+  body > main > header > #par {
+    flex-direction: row;
+  }
+  body > main > header > #par > button {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    margin: 15px;
+    margin-inline: 0.1%;
+    margin-block: 5%;
+    font-size: 15px;
+  }
+  body > main > header > #par > #b1 {
+    display: flex;
+  }
+  body > main > header > #par > #b2 {
+    display: flex;
+  }
+  body > main > header > #par > #b3 {
+    display: flex;
+  }
+  body > main > header > #par > #b4 {
+    width: 12%;
+    font-size: 16px;
+  }
+  body > main > header > #par > #shortmenu {
+    width: 12%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+    display: none;
+  }
+  body > main > header > #par > #shortmenu > img {
+    width: 100%;
+    scale: 0.65;
+  }
+  body > main > #mid {
+    top: 17%;
+  }
+  body > main > #mid > #half {
+    width: 85%;
+    height: 42vw;
+  }
+  body > main > #mid > #half > p {
+    font-size: 70px;
+    width: 60%;
+    margin-bottom: 15%;
+  }
+  body > main > #mid > p {
+    font-size: 140px;
+  }
+  body > main > #mid > #first {
+    top: 5%;
+    left: 30%;
+  }
+  body > main > #mid > #last {
+    top: 16%;
+    left: 41.5%;
+  }
+  body > main > #mid > #img {
+    scale: 0.4;
+    top: -38%;
+  }
+  body > main > #paye {
+    height: 250vh;
+    top: 130%;
+    align-items: center;
+    flex-direction: column;
+  }
+  body > main > #paye > #circle1 {
+    transform: translateX(-50%);
+    scale: 1;
+    display: flex;
+  }
+  body > main > #paye > img {
+    scale: 0.45;
+    top: 135%;
+  }
+  body > main > #paye > video {
+    top: 110%;
+  }
+  body > main > #paye > .parent {
+    width: 80%;
+    margin-top: 60%;
+  }
+  body > main > #paye > .parent > #txt1 {
+    width: 100%;
+    font-size: 75px;
+    margin-top: -55%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  body > main > #paye > .parent > div {
+    width: 35%;
+    font-size: 30px;
+    padding: 8px;
+  }
+  body > main > #paye > .txt {
+    width: 30%;
+    margin-top: -90%;
+    margin-right: -50%;
+  }
+  body > main > #paye > .txt > #p1, body > main > #paye > .txt #p2 {
+    font-size: 20px;
+  }
+  body > main > #Portfolio {
+    top: 550%;
+  }
+  body > main > #Portfolio > p {
+    font-size: 80px;
+    scale: 1;
+    top: -50%;
+  }
+  body > main > #Portfolio > ul > li {
+    width: 40%;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(1):hover > img {
+    scale: 0.95;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(2):hover > img {
+    scale: 1;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(3):hover > img {
+    scale: 0.85;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(4):hover > img {
+    scale: 0.9;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(5):hover > img {
+    scale: 0.85;
+  }
+  body > main > #Portfolio > ul > li:nth-of-type(6):hover > img {
+    scale: 0.85;
+  }
+  body > main > #Portfolio > ul > li > h4 {
+    font-size: 60px;
+  }
+  body > main > #Portfolio > ul > li > p {
+    font-size: 26px;
+  }
+  body > main > #Portfolio > ul > li > .ip1 {
+    top: -200%;
+    left: 55%;
+  }
+  body > main > #Portfolio > ul > li > .ip2 {
+    top: -180%;
+    left: -80%;
+  }
+  body > main > #Portfolio > ul > li > .ip3 {
+    top: -180%;
+    left: -85%;
+  }
+  body > main > #Portfolio > ul > li > .ip4 {
+    top: -170%;
+    left: 50%;
+  }
+  body > main > #Portfolio > ul > li > .ip5 {
+    top: -170%;
+    right: 60%;
+  }
+  body > main > #Portfolio > ul > li > .ip6 {
+    top: -170%;
+    right: -80%;
+  }
+  body > main > #key {
+    height: 160vh;
+    border-radius: 0px 0px 600px 600px;
+    padding-top: 10%;
+    top: 820%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body > main > #key > #top {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 0%;
+  }
+  body > main > #key > #top > section {
+    margin: 0 5%;
+    margin-bottom: 10%;
+  }
+  body > main > #key > #top > section > .tt {
+    width: 100%;
+    margin-left: 0%;
+    text-align: start;
+  }
+  body > main > #key > #top > section > .tt > p {
+    font-size: 70px;
+  }
+  body > main > #key > #top > section > .t1 {
+    width: 80%;
+    font-size: 25px;
+    padding: 1%;
+    margin-left: 0%;
+  }
+  body > main > #key > #top > section:nth-of-type(2) {
+    width: 50%;
+    margin-top: 20%;
+    margin-left: 0%;
+  }
+  body > main > #key > #top > section:nth-of-type(2) > P {
+    font-size: 22px;
+  }
+  body > main > #key > #down {
+    width: 90%;
+    margin-top: -5%;
+  }
+  body > main > #key > #down > section {
+    width: 40%;
+    height: 14vh;
+  }
+  body > main > #key > #down > section > img {
+    scale: 0.3;
+  }
+  body > main > #key > #down > section > .i1 {
+    left: 2%;
+  }
+  body > main > #key > #down > section > .i2 {
+    left: -2%;
+  }
+  body > main > #key > #down > section > .i3 {
+    left: -17%;
+  }
+  body > main > #key > #down > section > .i4 {
+    scale: 0.38;
+    left: 0%;
+  }
+  body > main > #key > #down > section > p {
+    font-size: 22px;
+    margin-left: 120px;
+  }
+  body > main > #teacher {
+    top: 1050%;
+  }
+  body > main > #teacher > h2 {
+    font-size: 90px;
+  }
+  body > main > #teacher > div {
+    width: 90%;
+    flex-direction: row;
+  }
+  body > main > #teacher > div > p {
+    width: 45%;
+    font-size: 30px;
+    margin-bottom: 2%;
+  }
+  body > main > #photos {
+    top: 1060%;
+    perspective: 1000px;
+  }
+  body > main > #photos > * {
+    will-change: transform;
+    transition: 0.3s;
+  }
+  body > main > #photos > #pic1 {
+    width: 40%;
+    left: 47%;
+    top: 320%;
+    rotate: 2deg;
+  }
+  body > main > #photos > #pic1 > .font {
+    font-size: 28px;
+  }
+  body > main > #photos > #pic1 > p {
+    font-size: 30px;
+    margin-block: 10px;
+  }
+  body > main > #photos > #pic1 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.1s;
+  }
+  body > main > #photos > #pic2 {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    left: 5%;
+    top: 150%;
+    rotate: -4deg;
+  }
+  body > main > #photos > #pic2 > .font {
+    font-size: 26px;
+  }
+  body > main > #photos > #pic2 > p {
+    font-size: 30px;
+    padding-block: 13px;
+  }
+  body > main > #photos > #pic2 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic3 {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    left: 65%;
+    top: 40%;
+    rotate: -4deg;
+  }
+  body > main > #photos > #pic3 > .font {
+    font-size: 26px;
+  }
+  body > main > #photos > #pic3 > p {
+    font-size: 30px;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic3 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic4 {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    rotate: 2deg;
+  }
+  body > main > #photos > #pic4 > .font {
+    font-size: 26px;
+  }
+  body > main > #photos > #pic4 > p {
+    font-size: 30px;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic4 > img {
+    scale: 1;
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic5 {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    left: 0%;
+    top: 290%;
+    rotate: 2deg;
+  }
+  body > main > #photos > #pic5 > .font {
+    font-size: 26px;
+  }
+  body > main > #photos > #pic5 > p {
+    font-size: 30px;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic5 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic6 {
+    width: 35%;
+    height: auto;
+    position: absolute;
+    top: 320%;
+    left: 50%;
+    rotate: 6deg;
+  }
+  body > main > #photos > #pic6 > .font {
+    font-size: 26px;
+  }
+  body > main > #photos > #pic6 > p {
+    font-size: 30px;
+    padding-block: 15px;
+  }
+  body > main > #photos > #pic6 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #photos > #pic7 {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    rotate: -6deg;
+  }
+  body > main > #photos > #pic7 > .font {
+    font-size: 26px;
+  }
+  body > main > #photos > #pic7 > p {
+    font-size: 30px;
+    padding-block: 10px;
+  }
+  body > main > #photos > #pic7 > img {
+    width: 100%;
+    height: 100%;
+  }
+  body > main > #sun {
+    background-color: #F5F5EB;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 1180%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  body > main > #sun > #Mentorship {
+    width: 85vw;
+    height: 265vh;
+    top: 100%;
+    border-radius: 0 0 600px 600px;
+    flex-direction: row;
+    transition: 0s;
+    position: fixed;
+  }
+  body > main > #sun > #Mentorship > #mentortitle {
+    width: 45%;
+    font-size: 70px;
+    margin-left: 5%;
+    margin-top: 0%;
+  }
+  body > main > #sun > #Mentorship > ul {
+    width: 85%;
+    margin-left: 0%;
+  }
+  body > main > #sun > #Mentorship > ul > li {
+    width: 70%;
+  }
+  body > main > #sun > #Mentorship > ul > li > h4 {
+    font-size: 40px;
+  }
+  body > main > #sun > #Mentorship > ul > li > div > section {
+    width: 55%;
+    height: 8vh;
+    font-size: 25px;
+  }
+  body > main > #sun > #Mentorship > ul > li > div > button {
+    height: 8vh;
+    font-size: 25px;
+  }
+  body > main > #about {
+    top: 1900%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -100%;
+  }
+  body > main > #about > #title-about {
+    width: 70%;
+    font-size: 90px;
+    margin-bottom: 80%;
+    margin-left: -10%;
+  }
+  body > main > #about > #logos {
+    width: 80vw;
+  }
+  body > main > #about > #logos > #sec1 {
+    width: 25%;
+  }
+  body > main > #about > #logos > #sec1 > figure {
+    width: 210px;
+    height: 210px;
+  }
+  body > main > #about > #logos > #sec1 > figure:hover {
+    scale: 1.3;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(1) {
+    top: 10%;
+    left: 15%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(2) {
+    top: -6%;
+    left: 35%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(3) {
+    top: 35%;
+    left: 0%;
+  }
+  body > main > #about > #logos > #sec1 > figure:nth-of-type(4) {
+    top: 0%;
+    left: 65%;
+  }
+  body > main > #about > #logos > #sec1 > figure > img {
+    width: 190px;
+    height: auto;
+  }
+  body > main > #about > #logos > #tvsec {
+    margin-top: 15%;
+  }
+  body > main > #about > #logos > #tvsec > #tv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    transition: 1s;
+  }
+  body > main > #about > #logos > #sec2 {
+    width: 25%;
+  }
+  body > main > #about > #logos > #sec2 > figure {
+    width: 210px;
+    height: 210px;
+  }
+  body > main > #about > #logos > #sec2 > figure:hover {
+    scale: 1.3;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(1) {
+    top: 60%;
+    left: 70%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(2) {
+    top: 25%;
+    left: 80%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(3) {
+    top: 65%;
+    left: 90%;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(4) {
+    top: 65%;
+    left: 12%;
+    width: 230px;
+    height: 230px;
+  }
+  body > main > #about > #logos > #sec2 > figure:nth-of-type(4) > img {
+    scale: 1.2;
+  }
+  body > main > #about > #logos > #sec2 > figure > img {
+    width: 170px;
+    height: auto;
+  }
+  body > main #help {
+    height: 220vh;
+    top: 2200%;
+  }
+  body > main #help > img {
+    top: 15%;
+  }
+  body > main #help > section > .dayere {
+    width: 270px;
+    height: 270px;
+    margin-top: 20%;
+    padding: 8%;
+    font-size: 40px;
+  }
+  body > main #help > section > .dayere:hover {
+    background-color: rgba(0, 0, 0, 0.7450980392);
+    color: #D2D3C3;
+  }
+  body > main #help > section > .dayere:nth-of-type(1) {
+    top: 40%;
+    left: 40%;
+  }
+  body > main #help > section > .dayere:nth-of-type(2) {
+    top: 40%;
+    left: -15%;
+  }
+  body > main #help > section > .dayere:nth-of-type(3) {
+    top: 0%;
+    left: 40%;
+  }
+  body > main #help > section > .dayere:nth-of-type(4) {
+    top: 15%;
+    left: 0%;
+  }
+  body > main #help > section > .dayere:nth-of-type(5) {
+    top: 20%;
+    left: 70%;
+  }
+  body > main #help > .contact {
+    width: 85%;
+    height: 30vh;
+    margin-bottom: 100px;
+  }
+  body > main #help > .contact > #kesho {
+    width: 51%;
+    height: 8vh;
+    font-size: 26px;
+    margin-left: 1.5%;
+  }
+  body > main #help > .contact > #kesho > option {
+    background-color: #E0E1D1;
+  }
+  body > main #help > .contact > input {
+    width: 44%;
+    height: 8vh;
+    font-size: 26px;
+  }
+  body > main #help > .contact > input::-moz-placeholder {
+    color: #1b1c1e;
+  }
+  body > main #help > .contact > input::placeholder {
+    color: #1b1c1e;
+  }
+  body > main #help > .contact > input:nth-of-type(3) {
+    width: 100%;
+  }
+  body > main #help > .contact > input:nth-of-type(2) {
+    width: 100%;
+  }
+  body > main > #footer {
+    width: 6vw;
+    height: 6vw;
+    position: fixed;
+    z-index: 10000000;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  body > main > #footer > img {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+@keyframes elevator {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes tab {
+  0% {
+    rotate: 20deg;
+  }
+  30% {
+    rotate: -20deg;
+  }
+  60% {
+    rotate: 10deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+@keyframes rot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Portfolio {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+@keyframes sun {
+  from {
+    width: 900px;
+    height: 900px;
+  }
+  to {
+    width: 2500px;
+    height: 2500px;
+  }
+}
+@keyframes anime1 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(10px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+@keyframes anime2 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(2px) translateX(5px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+@keyframes anime3 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(6px) translateX(9px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+@keyframes anime4 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(5px) translateX(4px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+@keyframes anime5 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(10px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+@keyframes about {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+.sunanimation {
+  animation: sun 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.tab {
+  animation: tab 1s;
+  animation-iteration-count: 1;
+}
+
+.not-active {
+  color: rgba(0, 0, 0, 0.438);
+  transition: 0.4s;
+}
+.not-active > h4 {
+  z-index: -1;
+}
+.not-active > p {
+  z-index: -1;
+}
+
+.active {
+  color: #51733F;
+  transition: 1s;
+  animation: Portfolio 0.4s forwards;
+}
+.active > h4 {
+  z-index: 999;
+}
+.active > p {
+  z-index: 999;
+}
+
+.font {
+  font-family: "satoshi";
+}
+
+.smooth {
+  position: fixed !important;
+  transition: transform 0s linear;
+}
+
+.tvstep1 {
+  scale: 0.001;
+  opacity: 0.2;
+}
+
+.tvstep2 {
+  scale: 1;
+  opacity: 1;
+}
+
+.elevator {
+  opacity: 1;
+  animation: elevator 2.1s ease-in-out;
+}
+
+.aboutanime {
+  animation: about 1s forwards;
+}/*# sourceMappingURL=master.css.map */
